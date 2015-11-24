@@ -6,3 +6,5 @@ My first great idea!
 This idea is even better..
 
 Change on github.com to show commit changes
+
+Now this is a change on my laptop! Wahoo.
