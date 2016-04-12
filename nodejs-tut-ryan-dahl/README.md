@@ -1,0 +1,1 @@
+The creator of node.js doing a live workshop. Mostly on networking he even creates a really quick telnet chatroom over tcp. Seeing how much he has changed since his first public talk on node it's made me really excited what can be done when you set yourself to change.
