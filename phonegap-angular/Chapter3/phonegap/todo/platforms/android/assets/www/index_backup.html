@@ -1,0 +1,75 @@
+<!doctype html>
+<html ng-app>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.12/angular.min.js"></script>
+    <script src="js/todo.js"></script>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <style>
+      body {
+        padding:40px 20px 0 20px;
+      }
+      #todoDetails {
+        visibility: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Todo App</a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">To Dos</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+    <div class="container"> 
+      <div class="row"  ng-controller="todoCtrl">
+      <div class="col-md-6">
+        <h2>Todo</h2>
+        <div>
+          <span>{{remaining()}} of {{todos.length}} remaining</span>
+          [ <a href="" ng-click="archive()">archive</a> ]
+          <ul class="unstyled">
+            <li ng-repeat="todo in todos">
+              <input type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+              <button ng-click="showDetail(todo.text)">Detail</button>
+            </li>
+          </ul>
+          <form ng-submit="addTodo()">
+            <input type="text" ng-model="todoText"  size="30"
+                   placeholder="add new todo here">
+            <input class="btn-primary" type="submit" value="add">
+          </form>
+        </div>
+      </div>
+      <div id="todoDetails" class="col-md-6" >
+        <h2>Details</h2>
+        Title: <span id="title">{{currentText}}</span>
+        <br>
+        Add Details:
+        <form ng-submit="addDetails(currentText)">
+          <textarea id="details" ng-model="currentDetails">{{currentDetails}}</textarea>
+          <p>
+            <input class="btn-primary" type="submit" value="Add Details">
+            <input class="btn-primary" type="submit" value="Cancel" ng-click="closeThis()">
+          </p>
+        </form>
+      </div>
+    </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="http://getbootstrap.com/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
