@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # learning-path
 My personal learning path.
 
@@ -20,4 +19,3 @@ This idea is even better..
 Change on github.com to show commit changes
 
 Now this is a change on my laptop! Wahoo.
->>>>>>> 57d8eb0a26a5f955f2326876e9c4945d929ae559
