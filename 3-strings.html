@@ -1,0 +1,95 @@
+<!doctype <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src"https://apis.google.com/js/platform.js"></script>
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display: none;}
+      .show {display: inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <<h2>Introduction</h2>
+    <script>
+    document.write("5 + 4 = ", 5 + 4, "<br />");
+    document.write("5 - 4 = ", 5 - 4, "<br />");
+    document.write("5 * 4 = ", 5 * 4, "<br />");
+    document.write("5 / 4 = ", 5 / 4, "<br />");
+    document.write("5 % 4 = ", 5 % 4, "<br />");
+    document.write("Max Num =", Number.MAX_VALUE, "<br />");
+    document.write("Min Num =", Number.MIN_VALUE, "<br />");
+    // this test shows if you add a 0 the number is rounded
+    precisionTest = 0.1000000000000001;
+    document.write(precisionTest + 0.1000000000000001, "<br/>");
+    // variables
+    </script>
+    <h2>Variables</h2>
+    <script>
+    var balance = 1563.87;
+    // .toFixed sets the output to n decimal places
+    document.write("Monthly Payment: ", (balance / 12).toFixed(2), "<br />");
+    // default maths
+    var randNum = 5;
+    document.write("randNum++ = ", randNum++, "<br />");
+    var randNum = 5;
+    document.write("++randNum = ", ++randNum, "<br />");
+    var randNum = 5;
+    document.write("randNum-- = ", randNum--, "<br />");
+    var randNum = 5;
+    document.write("--randNum = ", --randNum, "<br />");
+    var randNum = 5;
+    document.write("randNum += 5 = ", randNum += 5, "<br />");
+    var randNum = 5;
+    document.write("randNum -= 5 = ", randNum -= 5, "<br />");
+    var randNum = 5;
+    document.write("randNum *= 5 = ", randNum *= 5, "<br />");
+    var randNum = 5;
+    document.write("randNum /= 5 = ", randNum /= 5, "<br />");
+    var randNum = 5;
+    // order of operations
+    document.write("3 + 2 * 5 = ", 3 + 2 * 5, "<br />");
+    document.write("(3 + 2) * 5 = ", (3 + 2) * 5, "<br />");
+    // more maths
+    document.write("Math.E = ", Math.E, "<br />");
+    document.write("Math.PI = ", Math.PI, "<br />");
+    document.write("Math.abs(-8) = ", Math.abs(-8), "<br />");
+    document.write("Math.cbrt(1000) = ", Math.cbrt(1000), "<br />");
+    document.write("Math.ceil(6.45) = ", Math.ceil(6.45), "<br />");
+    document.write("Math.floor(6.45) = ", Math.floor(6.45), "<br />");
+    document.write("Math.round(6.45) = ", Math.round(6.45), "<br />");
+    document.write("Math.log(10) = ", Math.log(10), "<br />");
+    document.write("Math.max(10, 5) = ", Math.max(10, 5), "<br />");
+    document.write("Math.min(10, 5) = ", Math.min(10, 5), "<br />");
+    document.write("Math.pow(4, 2) = ", Math.pow(4, 2), "<br />");
+    document.write("Math.sqrt(1000) = ", Math.sqrt(1000), "<br />");
+    document.write("Math.sqrt(1000).toFixed(2) = ", Math.sqrt(1000).toFixed(2), "<br />");
+    document.write("Random # (1-10) = ", Math.floor((Math.random() * 10) +1), "<br />");
+    document.write("Converted String: ", Number("3.14"), "<br />");
+    document.write("Converted Int: ", parseInt("5"), "<br />");
+    document.write("Converted Float: ", parseFloat("3.14"), "<br />");
+    // strings
+    </script>
+    <h2>Strings</h2>
+    <script>
+    var randStr = "A long " + "string that " + "goes on and on";
+    document.write("String = ", randStr, "<br />");
+    document.write("String Length ", randStr.length + "<br />");
+    document.write("Index for \"goes\":", randStr.indexOf("goes"), "<br />");
+    document.write("randStr.slice(19) = ", randStr.slice(19), "<br />");
+    document.write("randStr.slice(19, 23) = ", randStr.slice(19, 23), "<br />");
+    document.write("randStr.substr(19, 4) = ", randStr.substr(19, 4), "<br />");
+    document.write("randStr.replace = ",randStr.replace("and on", "forever") + "<br />");
+    document.write("Character At Index 2: ", randStr.charAt(2) + "<br />");
+    var randStrArray = randStr.split(" ");
+    document.write("randStr as array: ", randStrArray, "<br />");
+    </script>
+  </body>
+</html>>
