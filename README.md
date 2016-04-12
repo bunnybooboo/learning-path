@@ -7,4 +7,4 @@ After doing a few I though to simultaneously start working with git to increase 
 
 Start NOW: Take ACTION etc..
 
-
+Connected Atom using `git config --global core.editor 'atom --wait`
