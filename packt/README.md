@@ -5,13 +5,13 @@ obtain direct from their site.
 
 Many of these have been obtained by watching out for their daily free offer. http://bit.ly/PacktDailyOffer
 
-**08042016 - Phonegap & AngularJS for cross-platform development**
+**08042016 - Phonegap & AngularJS for cross-platform development**<br />
 https://www.packtpub.com/application-development/phonegap-and-angularjs-cross-platform-development
 <br />Had issues completing over the weekend. Learned so much with it though. Will return to it.
 
-**14042016 - Mastering Javascript Design Patterns**
-https://www.packtpub.com/application-development/mastering-javascript-design-patterns  
+**14042016 - Mastering Javascript Design Patterns**<br />
+https://www.packtpub.com/application-development/mastering-javascript-design-patterns
 <br />Skipping this for now as it's very academic
 
-**140402016 - Responsive Web Design with AngularJS**
+**140402016 - Responsive Web Design with AngularJS**<br />
 https://www.packtpub.com/web-development/responsive-web-design-angularjs
