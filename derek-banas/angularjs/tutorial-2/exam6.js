@@ -18,7 +18,7 @@ app6.controller('heroCtrl', function($scope, $rootScope) {
   // Searches through the hero array for a match
   function heroSearch(name){
 
-    // If a her is found it is returned
+    // If a hero is found it is returned
     $scope.heroData = "Not Found";
     for(var i=0; i < $scope.hero.length; i++){
       if ($scope.hero[i].heroName === name){
