@@ -1,0 +1,1 @@
+Started watching a [Youtube video on Yeoman]{https://www.youtube.com/watch?v=gKiaLSJW5xI} and it was really exciting. Couldn't get the setup to work so instead ran the [tutorial from the official site]{http://yeoman.io/codelab/index.html}. Only halfway so far.
