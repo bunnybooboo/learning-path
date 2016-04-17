@@ -37,7 +37,7 @@ jspm_packages
 *.css.map
 
 node_modules/
-local.0
-sampsite.0
-sampsite.1
-prealloc.*
+data/local.0
+data/sampsite.0
+data/sampsite.1
+data/journal/prealloc.*
