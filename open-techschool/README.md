@@ -1,1 +1,0 @@
-Attended just one Open Tech School in London on Javascript and two on Python. At the time I was trying/struggling to learn Python so dropped js. Turns out my brain has now decided js is easier so I've returned to it. Adding this to my learning to return to at a later date.
