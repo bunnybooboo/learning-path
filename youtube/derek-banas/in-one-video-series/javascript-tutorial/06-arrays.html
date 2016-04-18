@@ -1,0 +1,77 @@
+<!doctype <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src"https://apis.google.com/js/platform.js"></script>
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display: none;}
+      .show {display: inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <h2>Arrays</h2>
+    <script>
+    var tomSmith = ["Tom Smith", "123 Main", 120.50];
+
+    // Access first item
+    document.write("1st State : ", tomSmith[0], "<br />");
+
+    // Add an item
+    tomSmith[3] = "tsmith@aol.com";
+
+    // Overwrite index 2 and fit everything else after index 2 without
+    // overwriting (Put 0 for second parameter to not overwrite)
+    tomSmith.splice(2, 1, "Pittsburgh", "PA");
+
+    // Delete the 4th index item
+    tomSmith.splice(4,1);
+
+    // Convert an array into a string (Also use toString())
+    document.write("Array : ", tomSmith.valueOf(), "<br />");
+
+    // Convert an array into a string with separator
+    document.write("Array : ", tomSmith.join(", "), "<br />");
+
+    // Delete an index
+    delete tomSmith[3];
+
+    // Sort an array (reverse() for reverse sort)
+    // Works for sorting strings
+    tomSmith.sort();
+
+    // Sort numbers
+    var numbers = [4,3,9,1,20,43];
+
+    // Descending sort return y - x
+    numbers.sort(function(x,y){ return x - y });
+    document.write("Num Array : ", numbers.toString(), "<br />");
+
+    // Combine arrays
+    var combinedArray = numbers.concat(tomSmith);
+
+    // Remove the last item
+    tomSmith.pop();
+
+    // Add items to the end
+    tomSmith.push("555-1212", "US");
+
+    // Deletes the first item
+    tomSmith.shift();
+
+    // Adds item to the first index
+    tomSmith.unshift("Tom Smith");
+
+    for (var i = 0; i < tomSmith.length; i++) {
+      document.write(tomSmith[i], "<br />");
+    }
+    </script>
+  </body>
+</html>>

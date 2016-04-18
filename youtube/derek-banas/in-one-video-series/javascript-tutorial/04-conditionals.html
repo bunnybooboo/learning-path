@@ -1,0 +1,58 @@
+<!doctype <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src"https://apis.google.com/js/platform.js"></script>
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display: none;}
+      .show {display: inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <h2>Conditionals</h2>
+    <script>
+    var age = 8;
+    if ((age >= 5) && (age <= 6)){
+      document.write("Go to Kindergarten<br />");
+    } else if (age > 18) {
+      document.write("Go to College<br />");
+    } else {
+      document.write("Go to Grade ", age - 5, "<br />");
+    }
+
+    document.write("true || false = ", true || false, "<br />");
+
+    document.write("!true = ", ! true, "<br />");
+
+    document.write("\"5\" == 5 = ", ("5" == 5), "<br />");
+
+    document.write("\"5\" === 5 = ", ("5" === 5), "<br />");
+    // switch
+    switch(age) {
+      case 5 :
+      case 6 :
+        document.write("Go to Kindergarten<br />");
+        break;
+
+      case 7 :
+        document.write("Go to 1st Grade<br />");
+        break;
+
+      default :
+        document.write("Subtract 5 from your age<br />");
+    }
+    // Ternary Operator assigns a value based on a condition
+    var canIVote = (age >= 18) ? true : false;
+
+    document.write("Can I Vote : ", canIVote, "<br />");
+    </script>
+  </body>
+</html>>

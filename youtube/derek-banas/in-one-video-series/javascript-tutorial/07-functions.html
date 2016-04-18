@@ -1,0 +1,106 @@
+<!doctype <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src"https://apis.google.com/js/platform.js"></script>
+    <style type="text/css">
+      body {font-size: 1.6em;}
+      .hidden {display: none;}
+      .show {display: inline !important;}
+      button {
+        border: 2px solid black; background: #E5E4E2;
+        font-size: .5em; font-weight: bold; color: black;
+        padding: .8em 2em;
+        margin-top: .4em;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="sayHello"></p>
+    <h2>Functions</h2>
+    <script>
+    // Functions provide code reuse and eliminate repetitive code
+
+    // Define a function that checks if a value is in an array
+    function inArray(arrayToCheck, value){
+      for(i = 0; i < arrayToCheck.length; i++){
+        if(arrayToCheck[i] === value){
+          return true;
+        }
+      }
+      return false;
+    }
+
+    var randArray = [1,2,3,4,5];
+
+    document.write("In Array : ", inArray(randArray, 4), "<br />");
+
+    // Local variables defined in functions can't be accessed outside of
+    // the function
+
+    function times2(num){
+      var var2 = 2;
+      return num * var2;
+    }
+
+    // Causes Error : document.write("Val of var2 : ", var2, "<br />");
+
+    // Pass a function as a parameter
+    function times3(num){
+      return num * 3;
+    }
+
+    function multiply(func, num){
+      return func(num);
+    }
+
+    document.write("3 * 15 = ", multiply(times3, 15), "<br />");
+
+    // Define a function expression
+    // We can assign functions to variables, store them in arrays,
+    // pass them into other functions and return them from functions
+    var triple = function(num){
+      return num * 3;
+    };
+
+    document.write("3 * 45 = ", multiply(triple, 45), "<br />");
+
+    // Receive variable number of arguments
+    function getSum(){
+      var sum = 0;
+      for(i = 0; i < arguments.length; i++){
+        sum += arguments[i];
+      }
+      return sum;
+    }
+
+    document.write("Sum : ", getSum(1,2,3,4,5), "<br />");
+
+    // Return a variable number of values
+    function times2(theArray){
+      var newArray = [];
+      for(i = 0; i < theArray.length; i++){
+        newArray.push(theArray[i] * 2);
+      }
+      return newArray;
+    }
+
+    document.write("Array Doubled : ", times2([1,2,3,4,5]).toString(), "<br />");
+
+    // Recursive Function
+    function factorial(num){
+      if(num <= 1){
+        return 1;
+      } else {
+        return num * factorial(num - 1);
+      }
+    }
+
+    document.write("Factorial of 4 : ", factorial(4), "<br />");
+
+    // 1st: num = 4 * factorial(3) = 4 * 6 = 24
+    // 2nd: num = 3 * factorial(2) = 3 * 2 = 6
+    // 3rd: num = 2 * factorial(1) = 2 * 1 = 2
+    </script>
+  </body>
+</html>>
