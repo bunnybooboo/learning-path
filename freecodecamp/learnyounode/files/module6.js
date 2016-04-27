@@ -17,42 +17,93 @@ fs.readdir('/home/david/Documents/learning-path/freecodcamp/learnyounode/', func
 */
 // I had to ask for the answer :(
 // import modules
-var fs= require ('fs');
-var path= require('path');
+
+var myModule= require('./module6-required.js');
 // rename for brevity
 var file= process.argv[2];
 var extn="."+ process.argv[3];
 // position 0 is fs, 1 is the function readdir
 // 2 and 3 are the arguments (file & extension)
-fs.readdir(file, function (err, list) {
+// fs.readdir(file, myModule());
+myModule(file, extn, function(err, list){
+  if(err)
+    return console.error(err)
+  list.forEach(function (file){
+    console.log(file)
+  })
+})
+
+/*
+
+var filterFn = require('./solution_filter.js')
+var dir = process.argv[2]
+var filterStr = process.argv[3]
+
+filterFn(dir, filterStr, function (err, list) {
   if (err)
-  {
-  	throw err;
-  }
-// for each file
- list.forEach(function(files){
-   // if files extension name is the same as extn
-    if(path.extname(files) === extn){
-      console.log(files);
-    }
-  });
-});
+    return console.error('There was an error:', err)
 
-/*
- The fs.readdir() method takes a pathname as its first argument and a
- callback as its second. The callback signature is:
+  list.forEach(function (file) {
+    console.log(file)
+  })
+})
 
-    function callback (err, list) { /* ... */ //}
-/*
- where list is an array of filename strings.
+  You must write a module file to do most of the work. The module must
+  export a single function that takes three arguments: the directory name,
+  the filename extension string and a callback function, in that order. The
+  filename extension argument must be the same as what was passed to your
+  program. Dont turn it into a RegExp or prefix with "." or do anything
+  except pass it to your module where you can do what you need to make your
+  filter work.
 
- Documentation on the fs module can be found by pointing your browser here:
- file:///usr/local/lib/node_modules/learnyounode/node_apidoc/fs.html
+  The callback function must be called using the idiomatic node(err, data)
+  convention. This convention stipulates that unless theres an error, the
+  first argument passed to the callback will be null, and the second will be
+  your data. In this exercise, the data will be your filtered list of files,
+  as an Array. If you receive an error, e.g. from your call to
+  fs.readdir(), the callback must be called with the error, and only the
+  error, as the first argument.
 
- You may also find nodes path module helpful, particularly the extname
- method.
+  You must not print directly to the console from your module file, only
+  from your original program.
 
- Documentation on the path module can be found by pointing your browser
- here:
- file:///usr/local/lib/node_modules/learnyounode/node_apidoc/path.html
+  In the case of an error bubbling up to your original program file, simply
+  check for it and print an informative message to the console.
+
+  These four things are the contract that your module must follow.
+
+   » Export a single function that takes exactly the arguments described.
+   » Call the callback exactly once with an error or some data as described.
+   » Dont change anything else, like global variables or stdout.
+   » Handle all the errors that may occur and pass them to the callback.
+
+  The benefit of having a contract is that your module can be used by anyone
+  who expects this contract. So your module could be used by anyone else who
+  does learnyounode, or the verifier, and just work.
+
+ ─────────────────────────────────────────────────────────────────────────────
+
+ ## HINTS
+
+  Create a new module by creating a new file that just contains your
+  directory reading and filtering function. To define a single function
+  export, you assign your function to the module.exports object, overwriting
+  what is already there:
+
+     module.exports = function (args) { /* ... }
+
+  Or you can use a named function and assign the name.
+
+  To use your new module in your original program file, use the require()
+  call in the same way that you require('fs') to load the fs module. The
+  only difference is that for local modules must be prefixed with './'. So,
+  if your file is named mymodule.js then:
+
+     var mymodule = require('./mymodule.js')
+
+  The '.js' is optional here and you will often see it omitted.
+
+  You now have the module.exports object in your module assigned to the
+  mymodule variable. Since you are exporting a single function, mymodule is
+  a function you can call!
 */
