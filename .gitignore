@@ -1,3 +1,26 @@
+# node
 .gitignore
 node_modules/
-node_modules/\nbower_components/
+node_modules/
+bower_components/
+
+# logs
+*.log
+npm-debug.log*
+
+# yeoman
+build/
+dist/
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Dependency directories
+node_modules
+jspm_packages
+
+# sass
+.sass-cache/
+*.css.map
