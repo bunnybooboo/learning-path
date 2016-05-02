@@ -15,21 +15,21 @@ int main(void)
   // Get Lofty's height
   printf("Enter Lofty's height to the top of his/her head, in whole feet: ");
   scanf("%ld", &feet);
-  printf("...and then inches: ");
+  printf("                                      ...and then inches: ");
   scanf("%ld", &inches);
   lofty = feet*inches_per_foot + inches;
 
   // Get Shorty's height up to his/her eyes
   printf("Enter Shorty's height up to his/her eyes, in whole feet: ");
   scanf("%ld", &feet);
-  printf("... and then inches: ");
+  printf("                                      ... and then inches: ");
   scanf("%ld", &inches);
   shorty = feet*inches_per_foot + inches;
 
   // Get the distance from Shorty to Lofty
   printf("Enter the distance between Shorty and Lofty, in whole feet: ");
   scanf("%ld", &feet);
-  printf("... and then inches: ");
+  printf("                                      ... and then inches: ");
   scanf("%ld", &inches);
   shorty_to_lofty = feet*inches_per_foot + inches;
 
@@ -42,6 +42,8 @@ int main(void)
   // Calculate the height of the tree in inches
   tree_height = shorty + (shorty_to_lofty + lofty_to_tree)*(lofty-shorty)/shorty_to_lofty;
 
-  // The code to display the result will go here
+  // Display the result in feet and inches
+  printf("The height of the tree is %ld feet and %ld inches.\n",
+    tree_height/inches_per_foot, tree_height% inches_per_foot);
   return 0;
 }
