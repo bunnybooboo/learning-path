@@ -9,6 +9,7 @@ int main(void)
   long inches = 0L;
   long shorty_to_lofty = 0L;  // Distance from Shorty to Lofty in inches
   long lofty_to_tree = 0L;  // Distance from Lofty to the tree in inches
+  long tree_height = 0L; // Height of the tree in inches
   const long inches_per_foot = 12L;
 
   // Get Lofty's height
@@ -37,7 +38,9 @@ int main(void)
   scanf("%ld", &feet);
   lofty_to_tree = feet*inches_per_foot;
 
-  // The code to calculate the height of the tree will go here
+
+  // Calculate the height of the tree in inches
+  tree_height = shorty + (shorty_to_lofty + lofty_to_tree)*(lofty-shorty)/shorty_to_lofty;
 
   // The code to display the result will go here
   return 0;
