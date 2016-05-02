@@ -4,3 +4,9 @@ hours worked to be entered through the keyboard as floating-point values. The pr
 should then calculate and output the average pay per hour in the following form:
 Your average hourly pay rate is 7 dollars and 54 cents.
 */
+
+#include <stdio.h>
+
+int main(void) {
+
+}
