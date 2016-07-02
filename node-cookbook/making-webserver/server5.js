@@ -14,7 +14,7 @@ http.createServer(function (request, response) {
   fs.exists(f, function (exists) {
     if (exists) {
       fs.readFile(f, function (err, data) {
-        if (err) {reponse.writeHead(500); reponse.end('Server Error!'); return; }
+        if (err) {response.writeHead(500); response.end('Server Error!'); return; }
         var headers = {'Content-type': mimeTypes[path.extname (lookup)]};
         response.writeHead(200, headers);
         response.end(data);
