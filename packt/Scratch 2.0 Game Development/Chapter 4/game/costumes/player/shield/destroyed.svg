@@ -1,0 +1,11 @@
+<svg version="1.1" width="483" height="27" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="grad_1" x2="1">
+      <stop offset="0" stop-color="#FF0000" stop-opacity="1"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <!-- Exported by Scratch - http://scratch.mit.edu/ -->
+  <path id="ID0.4079327071085572" fill="none" stroke="url(#grad_1)" stroke-width="6" stroke-linecap="round" d="M 0.500 250 L 476.500 250 " transform="matrix(1, 0, 0, 4.416666507720947, 3, -1090.85)"/>
+  <text id="ID0.7297070873901248" fill="#000000" x="51" y="190.25" text-anchor="start" font-family="Helvetica" font-size="22" transform="matrix(0.7633135914802551, 0, 0, 0.670710563659668, 303.3, 4)">shield deactivated</text>
+</svg>

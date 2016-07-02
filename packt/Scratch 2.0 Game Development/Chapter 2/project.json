@@ -1,0 +1,1078 @@
+{
+	"objName": "Stage",
+	"variables": [{
+			"name": "funds",
+			"value": 28,
+			"isPersistent": false
+		},
+		{
+			"name": "i",
+			"value": 4,
+			"isPersistent": false
+		},
+		{
+			"name": "enemies",
+			"value": 35,
+			"isPersistent": false
+		}],
+	"lists": [{
+			"listName": "cannon-x",
+			"contents": [-129, -77, -130, 33],
+			"isPersistent": false,
+			"x": 5,
+			"y": 32,
+			"width": 122,
+			"height": 222,
+			"visible": false
+		},
+		{
+			"listName": "cannon-y",
+			"contents": [76, 79, 38, -4],
+			"isPersistent": false,
+			"x": 5,
+			"y": 239,
+			"width": 122,
+			"height": 222,
+			"visible": false
+		}],
+	"scripts": [[172,
+			68,
+			[["whenGreenFlag"],
+				["doRepeat", ["lineCountOfList:", "cannon-x"], [["deleteLine:ofList:", 1, "cannon-x"]]],
+				["doRepeat", ["lineCountOfList:", "cannon-y"], [["deleteLine:ofList:", 1, "cannon-y"]]],
+				["setVar:to:", "funds", "40"]]]],
+	"sounds": [{
+			"soundName": "pop",
+			"soundID": 0,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "backdrop1",
+			"baseLayerID": 57,
+			"baseLayerMD5": "15564def96b8eb0f61758beb4127269b.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 0,
+	"penLayerMD5": "5c81a336fab8be57adc039a8a2b33ca9.png",
+	"tempoBPM": 60,
+	"videoAlpha": 0.5,
+	"children": [{
+			"objName": "enemy2",
+			"variables": [{
+					"name": "multiplier_B",
+					"value": "0.15",
+					"isPersistent": false
+				}],
+			"scripts": [[74,
+					60,
+					[["whenGreenFlag"],
+						["setVar:to:", "multiplier_B", "0.15"],
+						["lookLike:", "costume1"],
+						["hide"],
+						["gotoX:y:", -240, 0],
+						["wait:elapsed:from:", 8],
+						["doRepeat", 3, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 1]]],
+						["wait:elapsed:from:", 20],
+						["doRepeat", 3, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 1]]],
+						["wait:elapsed:from:", 5],
+						["doRepeat", 5, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 1]]]]],
+				[375,
+					44,
+					[["whenCloned"],
+						["lookLike:", "costume1"],
+						["heading:", 90],
+						["glideSecs:toX:y:elapsed:from:", ["*", 5, ["readVariable", "multiplier_B"]], -190, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 12.5, ["readVariable", "multiplier_B"]], -190, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 17, ["readVariable", "multiplier_B"]], -20, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 26.5, ["readVariable", "multiplier_B"]], -20, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 15.5, ["readVariable", "multiplier_B"]], 135, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 14, ["readVariable", "multiplier_B"]], 135, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 10.5, ["readVariable", "multiplier_B"]], 240, 0],
+						["broadcast:", "reached base"],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]],
+				[374,
+					456,
+					[["whenCloned"],
+						["show"],
+						["doUntil",
+							["=", ["costumeIndex"], "10"],
+							[["doIf", ["touching:", "cannonball"], [["nextCostume"]]], ["wait:elapsed:from:", 0.05]]],
+						["wait:elapsed:from:", 0.5],
+						["changeVar:by:", "funds", 3],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 1,
+					"baseLayerMD5": "10cd3cccb66c12c36006d4376f8f86d1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume2",
+					"baseLayerID": 2,
+					"baseLayerMD5": "1028c421d6ad72e4b90c7ae4fcac7d54.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume3",
+					"baseLayerID": 3,
+					"baseLayerMD5": "9bce5a4928fa174eff965271d0eb7c27.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume4",
+					"baseLayerID": 4,
+					"baseLayerMD5": "3f249a929c205e1c0c8044a771a84d74.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume5",
+					"baseLayerID": 5,
+					"baseLayerMD5": "24bf03cdeabc79d739ad9c8b9e6fcda8.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume6",
+					"baseLayerID": 6,
+					"baseLayerMD5": "dcf9eabee17d365ad7b04fc03f6e8c2b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume7",
+					"baseLayerID": 7,
+					"baseLayerMD5": "aaf141842c8888750851fe9fa576a871.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume8",
+					"baseLayerID": 8,
+					"baseLayerMD5": "dc09d4b58b878e9bdcb9f901fd39c4f0.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume9",
+					"baseLayerID": 9,
+					"baseLayerMD5": "beab130298cb5edace61e222ca0499a0.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume10",
+					"baseLayerID": 10,
+					"baseLayerMD5": "979e6afa1eb284d7d9bb335f1dafb369.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 14
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -240,
+			"scratchY": 0,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "cannon",
+			"scripts": [[73,
+					48,
+					[["whenGreenFlag"], ["lookLike:", "costume1"], ["hide"], ["doForever", [["gotoSpriteOrMouse:", "_mouse_"]]]]],
+				[69,
+					233,
+					[["whenCloned"],
+						["comeToFront"],
+						["show"],
+						["append:toList:", ["xpos"], "cannon-x"],
+						["append:toList:", ["ypos"], "cannon-y"],
+						["doForever", [["pointTowards:", "_mouse_"]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 11,
+					"baseLayerMD5": "8a610820762a371392f9aa5aa1c3657f.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 7,
+					"rotationCenterY": 7
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -128,
+			"scratchY": 131,
+			"scale": 1,
+			"direction": 63.43494882292201,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 4,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "cannonball",
+			"scripts": [[65,
+					380,
+					[["whenCloned"],
+						["comeToFront"],
+						["show"],
+						["pointTowards:", "_mouse_"],
+						["doRepeat",
+							10,
+							[["forward:", 10],
+								["doIf",
+									["|", ["touching:", "enemy1"], ["|", ["touching:", "enemy2"], ["touching:", "enemy3"]]],
+									[["wait:elapsed:from:", 0.05], ["deleteClone"]]]]],
+						["deleteClone"]]],
+				[65,
+					67,
+					[["whenGreenFlag"],
+						["hide"],
+						["doForever",
+							[["wait:elapsed:from:", 0.1],
+								["setVar:to:", "i", 0],
+								["doRepeat",
+									["lineCountOfList:", "cannon-x"],
+									[["changeVar:by:", "i", 1],
+										["gotoX:y:", ["getLine:ofList:", ["readVariable", "i"], "cannon-x"], ["getLine:ofList:", ["readVariable", "i"], "cannon-y"]],
+										["createCloneOf", "_myself_"]]]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 12,
+					"baseLayerMD5": "f263c2a72525d3f949513a9676ed3b56.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 6,
+					"rotationCenterY": 7
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 33,
+			"scratchY": -4,
+			"scale": 1,
+			"direction": 0,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 5,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "platform2",
+			"scripts": [[77,
+					81,
+					[["whenClicked"],
+						["doIfElse",
+							[">", ["readVariable", "funds"], "19"],
+							[["changeVar:by:", "funds", -20], ["createCloneOf", "cannon"]],
+							[["playSound:", "pop"]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 13,
+					"baseLayerMD5": "31f9f9eca92d746e858f1583e67611d7.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 44,
+					"rotationCenterY": 102
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -103,
+			"scratchY": -6,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 8,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "Sprite1",
+			"scripts": [[53,
+					42,
+					[["whenGreenFlag"],
+						["setVar:to:", "enemies", 0],
+						["gotoX:y:", 0, 0],
+						["hide"],
+						["doWaitUntil", ["=", ["readVariable", "enemies"], "35"]],
+						["lookLike:", "costume1"],
+						["comeToFront"],
+						["show"],
+						["stopScripts", "all"]]],
+				[271,
+					44,
+					[["whenIReceive", "game over"], ["lookLike:", "costume2"], ["comeToFront"], ["show"], ["stopScripts", "all"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 14,
+					"baseLayerMD5": "934aa73e51f931d72d86993a06faabce.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 107,
+					"rotationCenterY": 52
+				},
+				{
+					"costumeName": "costume2",
+					"baseLayerID": 15,
+					"baseLayerMD5": "61cb64bf6ce4629ed3a1a9cff350431a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 118,
+					"rotationCenterY": 46
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 0,
+			"scratchY": 0,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 9,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "enemy1",
+			"variables": [{
+					"name": "multiplier_R",
+					"value": "0.3",
+					"isPersistent": false
+				}],
+			"scripts": [[74,
+					60,
+					[["whenGreenFlag"],
+						["setVar:to:", "multiplier_R", "0.3"],
+						["lookLike:", "costume1"],
+						["hide"],
+						["gotoX:y:", -240, 0],
+						["wait:elapsed:from:", 3],
+						["doRepeat", 5, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]],
+						["wait:elapsed:from:", 10],
+						["doRepeat", 5, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]],
+						["wait:elapsed:from:", 10],
+						["doRepeat", 5, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]],
+						["wait:elapsed:from:", 10],
+						["doRepeat", 5, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]]]],
+				[328,
+					416,
+					[["whenCloned"],
+						["show"],
+						["doUntil",
+							["=", ["costumeIndex"], "10"],
+							[["doIf", ["touching:", "cannonball"], [["nextCostume"]]], ["wait:elapsed:from:", 0.05]]],
+						["wait:elapsed:from:", 0.5],
+						["changeVar:by:", "funds", 2],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]],
+				[311,
+					14,
+					[["whenCloned"],
+						["lookLike:", "costume1"],
+						["glideSecs:toX:y:elapsed:from:", ["*", 5, ["readVariable", "multiplier_R"]], -190, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 12.5, ["readVariable", "multiplier_R"]], -190, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 17, ["readVariable", "multiplier_R"]], -20, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 26.5, ["readVariable", "multiplier_R"]], -20, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 15.5, ["readVariable", "multiplier_R"]], 135, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 14, ["readVariable", "multiplier_R"]], 135, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 10.5, ["readVariable", "multiplier_R"]], 240, 0],
+						["broadcast:", "reached base"],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 16,
+					"baseLayerMD5": "13f69a2d23094f0074b542c73e0a7a81.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume2",
+					"baseLayerID": 17,
+					"baseLayerMD5": "33cd5305560bc009b73de5885f50c4b8.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume3",
+					"baseLayerID": 18,
+					"baseLayerMD5": "842d6b5dc0f8754f7dbd8fd70181f7d4.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume4",
+					"baseLayerID": 19,
+					"baseLayerMD5": "0d9ee8a399d2a2ec30ee3b3c243ecad9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume5",
+					"baseLayerID": 20,
+					"baseLayerMD5": "4cc619e8b10414cf8084a1f3e323967e.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume6",
+					"baseLayerID": 21,
+					"baseLayerMD5": "22e5620ff4964fb0ee84d58d5fca9a49.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume7",
+					"baseLayerID": 22,
+					"baseLayerMD5": "613ae31320682030aa1dad51b2041ac9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume8",
+					"baseLayerID": 23,
+					"baseLayerMD5": "8d667c1439885773eaf026730ce746c3.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume9",
+					"baseLayerID": 24,
+					"baseLayerMD5": "91e8be2d69bc0f9ad3b875b61ee56f11.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume10",
+					"baseLayerID": 25,
+					"baseLayerMD5": "871a238b3eb5f4f8347676503da05b3b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 14
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -240,
+			"scratchY": 0,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "enemy3",
+			"variables": [{
+					"name": "multiplier_Y",
+					"value": "0.5",
+					"isPersistent": false
+				}],
+			"scripts": [[74,
+					60,
+					[["whenGreenFlag"],
+						["setVar:to:", "multiplier_Y", "0.5"],
+						["lookLike:", "costume1"],
+						["hide"],
+						["gotoX:y:", -240, 0],
+						["wait:elapsed:from:", 18],
+						["doRepeat", 2, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]],
+						["wait:elapsed:from:", 10],
+						["doRepeat", 2, [["createCloneOf", "_myself_"], ["wait:elapsed:from:", 2]]]]],
+				[363,
+					413,
+					[["whenCloned"],
+						["show"],
+						["doUntil",
+							["=", ["costumeIndex"], "20"],
+							[["doIf", ["touching:", "cannonball"], [["nextCostume"]]], ["wait:elapsed:from:", 0.05]]],
+						["wait:elapsed:from:", 0.5],
+						["changeVar:by:", "funds", 4],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]],
+				[361,
+					26,
+					[["whenCloned"],
+						["lookLike:", "costume1"],
+						["heading:", 90],
+						["glideSecs:toX:y:elapsed:from:", ["*", 5, ["readVariable", "multiplier_Y"]], -190, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 12.5, ["readVariable", "multiplier_Y"]], -190, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 17, ["readVariable", "multiplier_Y"]], -20, 125],
+						["glideSecs:toX:y:elapsed:from:", ["*", 26.5, ["readVariable", "multiplier_Y"]], -20, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 15.5, ["readVariable", "multiplier_Y"]], 135, -140],
+						["glideSecs:toX:y:elapsed:from:", ["*", 14, ["readVariable", "multiplier_Y"]], 135, 0],
+						["glideSecs:toX:y:elapsed:from:", ["*", 10.5, ["readVariable", "multiplier_Y"]], 240, 0],
+						["broadcast:", "reached base"],
+						["changeVar:by:", "enemies", 1],
+						["deleteClone"]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 26,
+					"baseLayerMD5": "c6a6ff41678c9151b8d66a71a8369f74.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume11",
+					"baseLayerID": 26,
+					"baseLayerMD5": "c6a6ff41678c9151b8d66a71a8369f74.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume2",
+					"baseLayerID": 27,
+					"baseLayerMD5": "e65fbd8faf0e912c7019854b3fc0c557.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume12",
+					"baseLayerID": 27,
+					"baseLayerMD5": "e65fbd8faf0e912c7019854b3fc0c557.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume3",
+					"baseLayerID": 28,
+					"baseLayerMD5": "fd07f89040710e8c9188b012e67e5043.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume13",
+					"baseLayerID": 28,
+					"baseLayerMD5": "fd07f89040710e8c9188b012e67e5043.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume4",
+					"baseLayerID": 29,
+					"baseLayerMD5": "c5e91495883c76a518a2334882ccc8a5.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume14",
+					"baseLayerID": 29,
+					"baseLayerMD5": "c5e91495883c76a518a2334882ccc8a5.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume5",
+					"baseLayerID": 30,
+					"baseLayerMD5": "efede3f21568cdf244176c95e21d1836.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume15",
+					"baseLayerID": 30,
+					"baseLayerMD5": "efede3f21568cdf244176c95e21d1836.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume6",
+					"baseLayerID": 31,
+					"baseLayerMD5": "d2bb17f104deaf1340aa5a7c3b4426a1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume16",
+					"baseLayerID": 31,
+					"baseLayerMD5": "d2bb17f104deaf1340aa5a7c3b4426a1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume7",
+					"baseLayerID": 32,
+					"baseLayerMD5": "3326f7c424164368ccec90e9c99400b8.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume17",
+					"baseLayerID": 32,
+					"baseLayerMD5": "3326f7c424164368ccec90e9c99400b8.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume8",
+					"baseLayerID": 33,
+					"baseLayerMD5": "1059507e6aa9ece2a545146c033f7908.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume18",
+					"baseLayerID": 33,
+					"baseLayerMD5": "1059507e6aa9ece2a545146c033f7908.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume9",
+					"baseLayerID": 34,
+					"baseLayerMD5": "fb6dac0460d160ba0e28bd91aa8572c1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume19",
+					"baseLayerID": 34,
+					"baseLayerMD5": "fb6dac0460d160ba0e28bd91aa8572c1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume20",
+					"baseLayerID": 35,
+					"baseLayerMD5": "3e7fa62aab55c4f6f8e5d608d26e1e81.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 19,
+					"rotationCenterY": 12
+				},
+				{
+					"costumeName": "costume10",
+					"baseLayerID": 36,
+					"baseLayerMD5": "ef0918531897f5e502e6d3e53318dd9b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 14
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -240,
+			"scratchY": 0,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 3,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "enemy1",
+			"cmd": "getVar:",
+			"param": "multiplier_R",
+			"color": 15629590,
+			"label": "enemy1: multiplier_R",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 32,
+			"visible": false
+		},
+		{
+			"target": "Stage",
+			"cmd": "getVar:",
+			"param": "funds",
+			"color": 15629590,
+			"label": "funds",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 5,
+			"visible": true
+		},
+		{
+			"target": "enemy3",
+			"cmd": "getVar:",
+			"param": "multiplier_Y",
+			"color": 15629590,
+			"label": "enemy3: multiplier_Y",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 86,
+			"visible": false
+		},
+		{
+			"target": "enemy2",
+			"cmd": "getVar:",
+			"param": "multiplier_B",
+			"color": 15629590,
+			"label": "enemy2: multiplier_B",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 59,
+			"visible": false
+		},
+		{
+			"listName": "cannon-x",
+			"contents": [-129, -77, -130, 33],
+			"isPersistent": false,
+			"x": 5,
+			"y": 32,
+			"width": 122,
+			"height": 222,
+			"visible": false
+		},
+		{
+			"listName": "cannon-y",
+			"contents": [76, 79, 38, -4],
+			"isPersistent": false,
+			"x": 5,
+			"y": 239,
+			"width": 122,
+			"height": 222,
+			"visible": false
+		},
+		{
+			"objName": "platform1",
+			"scripts": [[77,
+					81,
+					[["whenClicked"],
+						["doIfElse",
+							[">", ["readVariable", "funds"], "19"],
+							[["changeVar:by:", "funds", -20], ["createCloneOf", "cannon"]],
+							[["playSound:", "pop"]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 13,
+					"baseLayerMD5": "31f9f9eca92d746e858f1583e67611d7.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 44,
+					"rotationCenterY": 102
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 55,
+			"scratchY": -5,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 7,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "base",
+			"scripts": [[152,
+					45,
+					[["whenGreenFlag"], ["gotoX:y:", 240, -5], ["lookLike:", "base1"], ["comeToFront"]]],
+				[399,
+					47,
+					[["whenIReceive", "reached base"],
+						["nextCostume"],
+						["doIf", ["=", ["costumeIndex"], "20"], [["broadcast:", "game over"]]]]]],
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "base1",
+					"baseLayerID": 37,
+					"baseLayerMD5": "f90482443ccd91f46c3e7035a9672dc3.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 90,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base2",
+					"baseLayerID": 38,
+					"baseLayerMD5": "14b2a9fe17096cd2b59c5de043d59c02.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 86,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base3",
+					"baseLayerID": 39,
+					"baseLayerMD5": "3038a6b74149fdf8cffa895b4bb2cb79.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 83,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base4",
+					"baseLayerID": 40,
+					"baseLayerMD5": "f11f30635efbb3cba5596afd3d695c85.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 79,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base5",
+					"baseLayerID": 41,
+					"baseLayerMD5": "aef0c9fd992b421bc523b0e4102934b2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 74,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base6",
+					"baseLayerID": 42,
+					"baseLayerMD5": "84987a6f81330275b3ad4d7dc31635c9.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 71,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base7",
+					"baseLayerID": 43,
+					"baseLayerMD5": "e729f2d845113bf0f1b8c366b3a79d39.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 66,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base8",
+					"baseLayerID": 44,
+					"baseLayerMD5": "afed2719e84a9cc1f00c8ea7f418d235.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 59,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base9",
+					"baseLayerID": 45,
+					"baseLayerMD5": "ed9944d355551ade6da44c8a882cbc6a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 55,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base10",
+					"baseLayerID": 46,
+					"baseLayerMD5": "a73be303668b739c99dcfb2642ee2a1b.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base11",
+					"baseLayerID": 47,
+					"baseLayerMD5": "3b071a6851c88201f30e1bcd5ec154f1.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base12",
+					"baseLayerID": 48,
+					"baseLayerMD5": "27fbc7a9fe9fd796ecd1866a9393955a.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "base13",
+					"baseLayerID": 49,
+					"baseLayerMD5": "f3139ea9e4e70a22a16ef87a13013225.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base14",
+					"baseLayerID": 50,
+					"baseLayerMD5": "d5545ba6d57b97bcd112de83df3600df.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base15",
+					"baseLayerID": 51,
+					"baseLayerMD5": "dc615bf8e19dbef05fed79d13768e369.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base16",
+					"baseLayerID": 52,
+					"baseLayerMD5": "5e72a35dd377987b98454df4d32d29d2.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base17",
+					"baseLayerID": 53,
+					"baseLayerMD5": "3fedaefb33b5bda2105e449db4ac4b08.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base18",
+					"baseLayerID": 54,
+					"baseLayerMD5": "77d3c65ac95e3007bf13384944a961c0.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base19",
+					"baseLayerID": 55,
+					"baseLayerMD5": "d7274ac47779ee99716de0ae57c220e4.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 52,
+					"rotationCenterY": 57
+				},
+				{
+					"costumeName": "base20",
+					"baseLayerID": 56,
+					"baseLayerMD5": "032a82e59f173d16495fac22a62c0cf0.svg",
+					"bitmapResolution": 1,
+					"rotationCenterX": 56,
+					"rotationCenterY": 77
+				}],
+			"currentCostumeIndex": 7,
+			"scratchX": 240,
+			"scratchY": -5,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 6,
+			"visible": true,
+			"spriteInfo": {
+			}
+		}],
+	"info": {
+		"hasCloudData": false,
+		"swfVersion": "v385",
+		"flashVersion": "WIN 11,2,202,223",
+		"videoOn": false,
+		"scriptCount": 20,
+		"projectID": "10065558",
+		"spriteCount": 9
+	}
+}

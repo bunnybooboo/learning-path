@@ -1,0 +1,754 @@
+{
+	"objName": "Scherm",
+	"sounds": [{
+			"soundName": "plop",
+			"soundID": 0,
+			"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+			"sampleCount": 258,
+			"rate": 11025,
+			"format": ""
+		}],
+	"costumes": [{
+			"costumeName": "MarioCircuit_1",
+			"baseLayerID": 50,
+			"baseLayerMD5": "074c070b0387797bb9c996cb9f0fb24f.png",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		},
+		{
+			"costumeName": "MarioCircuit_2",
+			"baseLayerID": 51,
+			"baseLayerMD5": "6825193f00fc958dde74df7cca8af4f3.png",
+			"bitmapResolution": 1,
+			"rotationCenterX": 240,
+			"rotationCenterY": 180
+		},
+		{
+			"costumeName": "Super_Mario_Kart_Mario_Circuit_2",
+			"baseLayerID": 52,
+			"baseLayerMD5": "b235fbb1f664270bc054f0d12d8d40f3.svg",
+			"bitmapResolution": 1,
+			"rotationCenterX": 180,
+			"rotationCenterY": 180
+		}],
+	"currentCostumeIndex": 1,
+	"penLayerMD5": "279467d0d49e152706ed66539b577c00.png",
+	"tempoBPM": 60,
+	"children": [{
+			"objName": "collision mask",
+			"scripts": [[38,
+					67,
+					[["whenGreenFlag"], ["gotoX:y:", 0, 0], ["goBackByLayers:", 100], ["setGraphicEffect:to:", "ghost", 100]]],
+				[283,
+					67,
+					[["whenKeyPressed", "r"],
+						["gotoX:y:", 0, 0],
+						["goBackByLayers:", 100],
+						["setGraphicEffect:to:", "ghost", 100]]]],
+			"costumes": [{
+					"costumeName": "MarioCircuit_480x360_collisionMask",
+					"baseLayerID": 1,
+					"baseLayerMD5": "2d10ba144da1003e70536790809ee28b.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 442,
+					"rotationCenterY": 317
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 0,
+			"scratchY": 0,
+			"scale": 1.0000000002328306,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 6,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "player2",
+			"variables": [{
+					"name": "touchFinish",
+					"value": "0",
+					"isPersistent": false
+				},
+				{
+					"name": "lap",
+					"value": 0,
+					"isPersistent": false
+				},
+				{
+					"name": "speed",
+					"value": 4.126467417716798,
+					"isPersistent": false
+				}],
+			"scripts": [[429, 260, [["whenKeyPressed", "left arrow"], ["turnLeft:", 6]]],
+				[426, 169, [["whenKeyPressed", "right arrow"], ["turnRight:", 6]]],
+				[43,
+					54,
+					[["whenGreenFlag"],
+						["setSizeTo:", 20],
+						["setGraphicEffect:to:", "ghost", 100],
+						["setVar:to:", "lap", "-1"],
+						["setVar:to:", "speed", "0"],
+						["gotoX:y:", 207, -36],
+						["heading:", 0],
+						["timerReset"],
+						["doForever",
+							[["doIf", ["<", ["readVariable", "speed"], "4"], [["changeVar:by:", "speed", 0.2]]],
+								["forward:", ["readVariable", "speed"]],
+								["wait:elapsed:from:", 0.1],
+								["doIf",
+									["touchingColor:", -5925789],
+									[["setVar:to:", "speed", ["*", ["readVariable", "speed"], 0.8]]]],
+								["doIf",
+									["|", ["touchingColor:", -16732928], ["touching:", "kart1"]],
+									[["setVar:to:", "speed", ["*", ["readVariable", "speed"], -0.6]]]],
+								["doIfElse",
+									["touching:", "finish"],
+									[["doIf",
+											["=", ["readVariable", "touchFinish"], "0"],
+											[["changeVar:by:", "lap", 1],
+												["setVar:to:", "touchFinish", "1"],
+												["doIf", ["=", ["readVariable", "lap"], "3"], [["say:", ["timer"]]]]]]],
+									[["setVar:to:", "touchFinish", "0"]]]]]]]],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 2,
+					"baseLayerMD5": "2fd2a06d2e5b3cbfa6c57717c0a83a85.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 6,
+					"rotationCenterY": 6
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -239,
+			"scratchY": 179,
+			"scale": 0.3846153846153847,
+			"direction": -72,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 3,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "player1",
+			"variables": [{
+					"name": "lap",
+					"value": 0,
+					"isPersistent": false
+				},
+				{
+					"name": "speed",
+					"value": -0.3,
+					"isPersistent": false
+				},
+				{
+					"name": "touchFinish",
+					"value": "0",
+					"isPersistent": false
+				}],
+			"scripts": [[20,
+					20,
+					[["whenGreenFlag"],
+						["setSizeTo:", 20],
+						["setGraphicEffect:to:", "ghost", 100],
+						["setVar:to:", "lap", "-1"],
+						["setVar:to:", "speed", "0"],
+						["gotoX:y:", 192, -27],
+						["heading:", 0],
+						["timerReset"],
+						["doForever",
+							[["doIf", ["<", ["readVariable", "speed"], "4"], [["changeVar:by:", "speed", 0.2]]],
+								["doIf",
+									["touchingColor:", -5925789],
+									[["setVar:to:", "speed", ["*", ["readVariable", "speed"], 0.8]]]],
+								["doIf",
+									["|", ["touchingColor:", -16732928], ["touching:", "kart2"]],
+									[["setVar:to:", "speed", ["*", ["readVariable", "speed"], -0.6]]]],
+								["doIfElse",
+									["touching:", "finish"],
+									[["doIf",
+											["=", ["readVariable", "touchFinish"], "0"],
+											[["changeVar:by:", "lap", 1],
+												["setVar:to:", "touchFinish", "1"],
+												["doIf", ["=", ["readVariable", "lap"], "3"], [["say:", ["timer"]]]]]]],
+									[["setVar:to:", "touchFinish", "0"]]],
+								["forward:", ["readVariable", "speed"]],
+								["wait:elapsed:from:", 0.1]]]]],
+				[237, 98, [["whenKeyPressed", "a"], ["turnLeft:", 6]]],
+				[395, 98, [["whenKeyPressed", "d"], ["turnRight:", 6]]]],
+			"costumes": [{
+					"costumeName": "costume1",
+					"baseLayerID": 3,
+					"baseLayerMD5": "1b41b1232585979c9aa5f76da7dafdb6.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 6,
+					"rotationCenterY": 6
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": -229.44686904175998,
+			"scratchY": 178.86793224234137,
+			"scale": 0.3846153846153847,
+			"direction": -72,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 2,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "finish",
+			"scripts": [[178, 86, [["whenGreenFlag"], ["setGraphicEffect:to:", "ghost", 100]]]],
+			"costumes": [{
+					"costumeName": "uiterlijk1",
+					"baseLayerID": 4,
+					"baseLayerMD5": "1652713361fcce5259346214d53d2e70.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 42,
+					"rotationCenterY": 2
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 191,
+			"scratchY": -16,
+			"scale": 1.0000000002328306,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 1,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "player1",
+			"cmd": "getVar:",
+			"param": "lap",
+			"color": 15629590,
+			"label": "player1 lap",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 355,
+			"y": 3,
+			"visible": true
+		},
+		{
+			"target": "player2",
+			"cmd": "getVar:",
+			"param": "lap",
+			"color": 15629590,
+			"label": "player2 lap",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 355,
+			"y": 30,
+			"visible": true
+		},
+		{
+			"target": "player2",
+			"cmd": "getVar:",
+			"param": "touchFinish",
+			"color": 15629590,
+			"label": "player2 touchFinish",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 86,
+			"visible": false
+		},
+		{
+			"objName": "super-mario-kart-mario-sprites-sheet",
+			"sounds": [{
+					"soundName": "pop",
+					"soundID": 0,
+					"md5": "83a9787d4cb6f3b7632b4ddfebf74367.wav",
+					"sampleCount": 258,
+					"rate": 11025,
+					"format": ""
+				}],
+			"costumes": [{
+					"costumeName": "super-mario-kart-mario-sprites-sheet",
+					"baseLayerID": 5,
+					"baseLayerMD5": "91bf3cf567126653b3e9140d62527342.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 207,
+					"rotationCenterY": 135
+				}],
+			"currentCostumeIndex": 0,
+			"scratchX": 17,
+			"scratchY": -39,
+			"scale": 1,
+			"direction": 90,
+			"rotationStyle": "normal",
+			"isDraggable": false,
+			"indexInLibrary": 7,
+			"visible": false,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "player1",
+			"cmd": "getVar:",
+			"param": "speed",
+			"color": 15629590,
+			"label": "player1 speed",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 32,
+			"visible": false
+		},
+		{
+			"target": "player2",
+			"cmd": "getVar:",
+			"param": "speed",
+			"color": 15629590,
+			"label": "player2 speed",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 5,
+			"visible": false
+		},
+		{
+			"objName": "kart2",
+			"scripts": [[37,
+					43,
+					[["whenGreenFlag"],
+						["setSizeTo:", 50],
+						["heading:", 0],
+						["doForever",
+							[["gotoSpriteOrMouse:", "player2"], ["lookLike:", ["+", ["\/", ["heading"], 17.14286], 1]]]]]],
+				[93, 252, [["whenKeyPressed", "right arrow"], ["turnRight:", 6]]],
+				[94, 339, [["whenKeyPressed", "left arrow"], ["turnLeft:", 6]]],
+				[108,
+					509,
+					[["setSizeTo:", 1000], ["doForever", [["nextCostume"], ["wait:elapsed:from:", 0.1]]]]]],
+			"costumes": [{
+					"costumeName": "luigi1",
+					"baseLayerID": 6,
+					"baseLayerMD5": "3844ff4da696d79c918c68bf5cb59eb0.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi2",
+					"baseLayerID": 7,
+					"baseLayerMD5": "eac1f41bb07cb3037110b511b6a4b717.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 13,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi3",
+					"baseLayerID": 8,
+					"baseLayerMD5": "84c9ebcf1adf762fb834b208a63de13b.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 13,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi4",
+					"baseLayerID": 9,
+					"baseLayerMD5": "1d36d3cf70316a1485b3c7ab05db6903.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi5",
+					"baseLayerID": 10,
+					"baseLayerMD5": "2daf21896478ede97e56f0564b018ac8.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi6",
+					"baseLayerID": 11,
+					"baseLayerMD5": "f04317003b609de0bb15b7ce2b1a2b97.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi7",
+					"baseLayerID": 12,
+					"baseLayerMD5": "a39782b1deccd0209f3bd5acae1e0998.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi8",
+					"baseLayerID": 13,
+					"baseLayerMD5": "0516ad65c1a81163a099086bbfd82f24.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi9",
+					"baseLayerID": 14,
+					"baseLayerMD5": "6a21c6f7dc58b29249b1734cfa300363.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi10",
+					"baseLayerID": 15,
+					"baseLayerMD5": "48fec9d08136419f4ffb09c0753a01df.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi11",
+					"baseLayerID": 16,
+					"baseLayerMD5": "df9210a842591ba84cd4bd010de7bcaa.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi12",
+					"baseLayerID": 17,
+					"baseLayerMD5": "7877139b7d0f661e0ed00b2d145ab8af.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi13",
+					"baseLayerID": 18,
+					"baseLayerMD5": "60868c37171915187b540cd917452f94.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi14",
+					"baseLayerID": 19,
+					"baseLayerMD5": "61c0ab78f1aeaaf0d8b8fb2da0c5aa7d.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi15",
+					"baseLayerID": 20,
+					"baseLayerMD5": "6f6b8e95e5668c2c89480156c7ea5e8f.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi16",
+					"baseLayerID": 21,
+					"baseLayerMD5": "57ee28de25fe69eef038b0bafc654dab.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi17",
+					"baseLayerID": 22,
+					"baseLayerMD5": "2305640b3941b1f09c15e23219834bf2.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "luigi18",
+					"baseLayerID": 23,
+					"baseLayerMD5": "17b8d34d3caf98f699cda7161c87c346.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi19",
+					"baseLayerID": 24,
+					"baseLayerMD5": "a87e57f679ecd476c145d25cfa627cd6.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 33
+				},
+				{
+					"costumeName": "luigi20",
+					"baseLayerID": 25,
+					"baseLayerMD5": "40b3f5624557e06585b58d1de5fa53ad.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi21",
+					"baseLayerID": 26,
+					"baseLayerMD5": "9628843832ab796c37066577c1a43285.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "luigi22",
+					"baseLayerID": 27,
+					"baseLayerMD5": "8912c80f39a1e72f7e4f1615d3a590af.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				}],
+			"currentCostumeIndex": 17.800000699999885,
+			"scratchX": -239,
+			"scratchY": 172,
+			"scale": 0.5,
+			"direction": -72,
+			"rotationStyle": "none",
+			"isDraggable": false,
+			"indexInLibrary": 5,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"objName": "kart1",
+			"scripts": [[74,
+					41,
+					[["whenGreenFlag"],
+						["setSizeTo:", 50],
+						["heading:", 0],
+						["doForever",
+							[["gotoSpriteOrMouse:", "player1"], ["lookLike:", ["+", ["\/", ["heading"], 17.14286], 1]]]]]],
+				[476, 164, [["whenKeyPressed", "a"], ["turnLeft:", 6]]],
+				[109,
+					390,
+					[["setSizeTo:", 1000], ["doForever", [["nextCostume"], ["wait:elapsed:from:", 0.1]]]]],
+				[479, 56, [["whenKeyPressed", "d"], ["turnRight:", 6]]]],
+			"costumes": [{
+					"costumeName": "mario1",
+					"baseLayerID": 28,
+					"baseLayerMD5": "00f1535d2623e116ea3a2d6c58d74979.png",
+					"bitmapResolution": 2,
+					"rotationCenterX": 27,
+					"rotationCenterY": 58
+				},
+				{
+					"costumeName": "mario2",
+					"baseLayerID": 29,
+					"baseLayerMD5": "efe07749dc0ef88ff6946ea7f9aff8fd.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 13,
+					"rotationCenterY": 30
+				},
+				{
+					"costumeName": "mario3",
+					"baseLayerID": 30,
+					"baseLayerMD5": "8cf94c19c8966ac151baa2c1e5501ed8.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 12,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario4",
+					"baseLayerID": 31,
+					"baseLayerMD5": "8c03ed0b8dec947d6b33bf735c3e9f14.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario5",
+					"baseLayerID": 32,
+					"baseLayerMD5": "8af2f6763308fdf4aa61d6ec6eb45ea0.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario6",
+					"baseLayerID": 33,
+					"baseLayerMD5": "dc23f4374991cebac5ec490189e0c333.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario7",
+					"baseLayerID": 34,
+					"baseLayerMD5": "e92298b5608adc64072fe49c005a1c14.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario8",
+					"baseLayerID": 35,
+					"baseLayerMD5": "3ea7f280fe6e47e7a2f726f0c0d60314.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario9",
+					"baseLayerID": 36,
+					"baseLayerMD5": "691756190f56b14064dd99b84fdf7b13.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario10",
+					"baseLayerID": 37,
+					"baseLayerMD5": "1e4f12b3a9075165659acc04369ea1e4.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario11",
+					"baseLayerID": 38,
+					"baseLayerMD5": "56d314ad550c68f052bf1304cad1f326.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario12",
+					"baseLayerID": 39,
+					"baseLayerMD5": "9e88b01f2aff43ee5e56f3f55397718b.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario13",
+					"baseLayerID": 40,
+					"baseLayerMD5": "869e67d3124c5ddf25eda047f73c88c5.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario14",
+					"baseLayerID": 41,
+					"baseLayerMD5": "88b0996df94f07821d4513a3a1061c6c.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario15",
+					"baseLayerID": 42,
+					"baseLayerMD5": "98c907a4547ea9c016c819ec9b3093a1.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario16",
+					"baseLayerID": 43,
+					"baseLayerMD5": "811a19eac5be53a4f9ed13052916d769.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario17",
+					"baseLayerID": 44,
+					"baseLayerMD5": "948c6c7d6fc7cbb29ad206d9e19a1da3.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario18",
+					"baseLayerID": 45,
+					"baseLayerMD5": "dde5e8f71b370b00a06c980b25fccd12.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 15,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario19",
+					"baseLayerID": 46,
+					"baseLayerMD5": "1c7548b14fc799344b38f516894485a1.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 32
+				},
+				{
+					"costumeName": "mario20",
+					"baseLayerID": 47,
+					"baseLayerMD5": "0d640e5ce2cce9f4ee53ffb3b392ee74.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 13,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario21",
+					"baseLayerID": 48,
+					"baseLayerMD5": "789490a5fca3b5497cec2058f29e0dbc.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				},
+				{
+					"costumeName": "mario22",
+					"baseLayerID": 49,
+					"baseLayerMD5": "38872ce05b82ff8eb40e957a9b9180a3.png",
+					"bitmapResolution": 1,
+					"rotationCenterX": 14,
+					"rotationCenterY": 31
+				}],
+			"currentCostumeIndex": 17.800000699999885,
+			"scratchX": -229.44686904175998,
+			"scratchY": 171,
+			"scale": 0.5,
+			"direction": -72,
+			"rotationStyle": "none",
+			"isDraggable": false,
+			"indexInLibrary": 4,
+			"visible": true,
+			"spriteInfo": {
+			}
+		},
+		{
+			"target": "player1",
+			"cmd": "getVar:",
+			"param": "touchFinish",
+			"color": 15629590,
+			"label": "player1 touchFinish",
+			"mode": 1,
+			"sliderMin": 0,
+			"sliderMax": 100,
+			"isDiscrete": true,
+			"x": 5,
+			"y": 59,
+			"visible": false
+		}],
+	"info": {
+		"history": "2012-4-12 16:51:34\tsave\tmultiplayer racebaan\t\t\r2012-4-12 17:05:26\tsave\tmultiplayer racebaan\t\t\r2012-4-12 17:07:04\tsave\tmultiplayer racebaan\t\t\r2012-4-12 20:14:26\tsave\tmultiplayer racebaan\t\t\r2012-4-17 17:58:21\tsave\tmultiplayer racebaan_120417\t\t\r2012-4-17 18:19:18\tsave\tmultiplayer racebaan_120417\t\t\r2012-4-17 19:06:42\tsave\tmultiplayer racebaan_120417\t\t\r2012-4-17 23:08:34\tsave\tmultiplayer racebaan_120417\t\t\r2012-4-17 23:11:07\tsave\tmultiplayer racebaan_120417\t\t\r2012-4-17 23:11:16\tsave\tmultiplayer racebaan_120417\t\t\r2012-5-24 11:54:17\tsave\tmultiplayer racebaan_120524\t\t\r",
+		"os-version": "1068",
+		"author": "",
+		"platform": "Mac OS",
+		"scriptCount": 15,
+		"scratch-version": "1.4 of 30-Jun-09",
+		"language": "nl",
+		"spriteCount": 7
+	}
+}

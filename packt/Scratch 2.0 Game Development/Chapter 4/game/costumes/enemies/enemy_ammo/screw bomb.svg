@@ -1,0 +1,22 @@
+<svg version="1.1" width="260" height="209" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <linearGradient id="grad_1" x2="1">
+      <stop offset="0" stop-color="#009933" stop-opacity="1"/>
+      <stop offset="1" stop-color="#00FF55" stop-opacity="1"/>
+    </linearGradient>
+    <linearGradient id="grad_2" x2="1">
+      <stop offset="0" stop-color="#009933" stop-opacity="1"/>
+      <stop offset="1" stop-color="#00FF55" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <!-- Exported by Scratch - http://scratch.mit.edu/ -->
+  <image id="ID0.18314342247322202" width="2" height="2" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAC0lEQVR42mNgQAcAABIAAeRVjecAAAAASUVORK5CYII=" transform="matrix(0.5, 0, 0, 0.5, 0, 0)"/>
+  <path id="ID0.5517069618217647" fill="url(#grad_1)" stroke="url(#grad_2)" stroke-width="2" d="M 240.750 170.500 C 243.164 170.500 245.352 171.649 246.936 173.504 C 248.520 175.360 249.500 177.922 249.500 180.750 C 249.500 183.578 248.520 186.140 246.936 187.996 C 245.352 189.851 243.164 191 240.750 191 C 238.336 191 236.148 189.851 234.564 187.996 C 232.980 186.140 232 183.578 232 180.750 C 232 177.922 232.980 175.360 234.564 173.504 C 236.148 171.649 238.336 170.500 240.750 170.500 Z " transform="matrix(0.8974359035491943, 0, 0, 0.6888889074325562, 23.65, 59.7)"/>
+  <path id="ID0.08893539616838098" fill="#009933" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 239.500 175.500 L 234 178.500 L 223.500 166 L 237.500 167.500 L 239.500 175.500 Z " transform="matrix(1, 0, 0, 1, -1, 0.5)"/>
+  <path id="ID0.8381917173974216" fill="#009933" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 239 188.500 L 243 188.500 L 240 205.500 L 237.500 189 Z "/>
+  <path id="ID0.08893539616838098" fill="#009933" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 239.500 175.500 L 234 178.500 L 223.500 166 L 237.500 167.500 L 239.500 175.500 Z " transform="matrix(-1, 0, 0, 1, 480.4, 1.25)"/>
+  <path id="ID0.2432106677442789" fill="none" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 235.500 190.500 L 244 195 "/>
+  <path id="ID0.14976495690643787" fill="none" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 235.500 195 L 244 198 "/>
+  <path id="ID0.49195776134729385" fill="none" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 237 200 L 241.500 200.500 "/>
+  <path id="ID0.20947597129270434" fill="none" stroke="#009933" stroke-width="2" stroke-linecap="round" d="M 238 203.500 L 243 204.500 "/>
+</svg>
