@@ -21,6 +21,7 @@ http.createServer(function (request, response) {
       });
       if (request.url === '/favicon.ico') {
         console.log('Not found: ' + f);
+        response.writeHead(404)
         response.end();
         return;
       }
