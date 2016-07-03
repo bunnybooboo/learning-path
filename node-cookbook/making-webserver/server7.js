@@ -12,7 +12,7 @@ function cacheAndDeliver(f, cb) {
   if (!cache[f]) {
     fs.readFile(f, function(err, data) {
       if (!err) {
-        cache[f] = {content: data, timestamp: Date.now()} ; //store a unix timestamp
+        cache[f] = {content: data} ;
       }
       cb(err, data);
     });
