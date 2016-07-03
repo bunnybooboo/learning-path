@@ -1,3 +1,4 @@
+//basic server, page routing, error handling
 var http = require('http');
 var path = require('path');
 var pages = [

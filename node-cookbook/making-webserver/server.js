@@ -1,3 +1,6 @@
+//default working file for progressing through book
+//copies at each step are then saved 
+
 var http = require('http');
 var path = require('path');
 var fs = require('fs');

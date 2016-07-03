@@ -1,3 +1,4 @@
+//basic server, sub page routing, error handling
 var http=require('http');
 var pages = [
   {route: '/', output: 'Woohoo!'},
