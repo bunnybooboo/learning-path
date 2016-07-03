@@ -1,6 +1,5 @@
-//default working file for progressing through book
-//copies at each step are then saved
-
+//fstat timestamping when each file has been changed
+//if cached copy is older then new file is loaded into cache object
 var http = require('http');
 var path = require('path');
 var fs = require('fs');
