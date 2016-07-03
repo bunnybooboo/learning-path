@@ -38,7 +38,7 @@ http.createServer(function (request, response) {
           chunk.copy(cache[f].content, bufferOffset);
           bufferOffset += chunk.length;
         });
-      });
+      }); //end of createReadStream
 
       return;
 
