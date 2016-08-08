@@ -1,7 +1,7 @@
 # Get Your Startup Started
-
-## 12 Month Goals
 ****
+## 12 Month Goals
+
 ### Set Goals
 1. How many customers?
 2. How much revenue?

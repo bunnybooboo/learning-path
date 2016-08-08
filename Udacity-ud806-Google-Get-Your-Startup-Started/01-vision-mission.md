@@ -1,7 +1,7 @@
 # Get Your Startup Started
-
-## Vision Statement
 ****
+## Vision Statement
+
 ### Definition
 * Declaration of objectives
 * Your big dream
@@ -16,9 +16,9 @@
 * Sense of purpose
 * Call to action
 * Describe your destination
-
-## Mission Statement
 ****
+## Mission Statement
+
 ### Definition
 * Function, market, and goals
 * Ground your big dream

@@ -1,7 +1,6 @@
 # Get Your Startup Started
-
-## Opportunity Cost
 ****
+## Opportunity Cost
 
 ### Evaluate
 * New opportunities
