@@ -36,3 +36,11 @@ Published to AirMoz 18/07/2016
 * You will get stronger
 * It might feel like you might die but it's highly unlikely
 * Look fear right in the face
+* It's really just 2 people talking to each other
+* Don't undercut your power the moment you open your mouth - "I'm really not prepared"
+* Make them feel great about the choice they made to come
+* Forgive yourself for not being better already
+* Break apart the feelings from the reality
+* Pushing those feelings away & pretending they're not there will make them louder
+* Be prepared to start on time & finish on times
+* It's your job to be make the time
