@@ -28,3 +28,9 @@
 **Matt Kaufman:**
 * focus on what things will drive the business forward
 * select the right customers - willing to take unfinished product and incorporate into their workflow
+****
+**Art Gillespe:**
+* the reason you bring people into your team is to build something bigger than what's in your head
+* they will provide different angles you will not have previously though of
+* identify your weeknesses
+* every week identify what worked well and what went wrong
