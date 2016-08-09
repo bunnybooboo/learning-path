@@ -23,6 +23,8 @@ Size of the organisation, its industry and position in the value chain
 
 ### Buyer Behaviour
 Loyalty to suppliers, usage patterns, and order size
+
+via http://tisconsulting.org/news/market-segmentation-basic-strategies/
 ***
 ## Criteria for Effective Segmentation
 * homogenous
@@ -47,6 +49,8 @@ Market should be reachable especially in regards to communicating to the market 
 Business needs to have resources to be able to target the group. Some segements may therefore be out of scope.
 #### Responsive
 Each segment should be likely to react to targetting vs generalisation. If segements do not respond to targetting they are ripe for combining with similar segements.
+
+via http://www.segmentationstudyguide.com/understanding-market-segmentation/criteria-for-effective-market-segmentation/
 ***
 
 eg. Cluster Analysis (especially K-Means Cluster Analysis)
