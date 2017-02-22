@@ -20,7 +20,7 @@ Commenting works very much like other languages. To comment you use `//` for lin
 
 This appears *after* the section on Global Constants in the book. (TBD) edit so the readability has more info here first.
 
-Simple constants are set using `const`. For example to set a constant 'PI' as a floating point integer you would write `const PI: f32 = 3.142` allowing you to evoke PI in your application.
+Simple constants are set using `const`. For example to set a constant 'PI' as a floating point integer you would write `const PI: f32 = 3.142` allowing you to evoke PI in your application when you compile.
 
 ## Global Constants
 
