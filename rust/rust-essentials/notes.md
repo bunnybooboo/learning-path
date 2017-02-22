@@ -18,7 +18,7 @@ Commenting works very much like other languages. To comment you use `//` for lin
 
 ## Global Constants
 
-Resources and constants are defined in the header, just like in other languages. Constants are set by the keyword `static`. Naming convention is in all caps and underscores. They should also be indicated using `i32` for integers, or `str` for strings.
+Resources and constants are defined in the header, just like in other languages. Constants are set by the keyword `static`. Naming convention is in all caps and underscores. They should also be indicated using `i32` for integers, or `str` for strings. Rust has a limited lifetime on objects. `static` is the longest possible age you can add to your code. It will remain available throughout the lifetime of the application.
 
 ## Error Handling
 
