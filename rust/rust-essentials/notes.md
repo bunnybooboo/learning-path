@@ -16,6 +16,12 @@ Rust uses a package and dependency manager called Cargo. This in my brain at lea
 
 Commenting works very much like other languages. To comment you use `//` for line comments (the preferred method in Rust). To open block comment `/*` and to close `*/`. For a documentation comment you should use `///`.
 
+## Simple Constants
+
+This appears *after* the section on Global Constants in the book. (TBD) edit so the readability has more info here first.
+
+Simple constants are set using `const`. For example to set a constant 'PI' as a floating point integer you would write `const PI: f32 = 3.142` allowing you to evoke PI in your application.
+
 ## Global Constants
 
 Resources and constants are defined in the header, just like in other languages. Constants are set by the keyword `static`. Naming convention is in all caps and underscores. They should also be indicated using `i32` for integers, or `str` for strings. Rust has a limited lifetime on objects. `static` is the longest possible age you can add to your code. It will remain available throughout the lifetime of the application.
