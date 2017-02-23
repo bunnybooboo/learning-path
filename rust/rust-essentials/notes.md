@@ -36,7 +36,9 @@ An example error used in the book `2:22 error: missing lifetime specifier [E0106
 
 ## String Interpolation
 
-This happens via print where items are inserted using the placeholder characters '{}' and even as '{0}', '{1}'
+This happens via print where items are inserted using the placeholder characters '{}' and even as '{0}', '{1}'.
+
+So to use the unumbered version as a first example:
 `println!("My cat's name is: {}", Evil);`
 and an example of the use of the numbered placeholders:
 `println!("My cat's name: {0} and she is: {}.", Evil, lovely);`
