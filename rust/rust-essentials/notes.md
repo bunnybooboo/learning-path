@@ -29,3 +29,14 @@ Resources and constants are defined in the header, just like in other languages.
 ## Error Handling
 
 An example error used in the book `2:22 error: missing lifetime specifier [E0106]` shows the error is on line 2, at position 22 (including spaces!)
+
+## Printing
+
+`println!("Helo there, you lovely person!");``
+
+## String Interpolation
+
+This happens via print where items are inserted using the placeholder characters '{}' and even as '{0}', '{1}'
+`println!("My cat's name is: {}", Evil);`
+and an example of the use of the numbered placeholders:
+`println!("My cat's name: {0} and she is: {}.", Evil, lovely);`
