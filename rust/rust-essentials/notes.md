@@ -42,3 +42,7 @@ So to use the unumbered version as a first example:
 `println!("My cat's name is: {}", Evil);`
 and an example of the use of the numbered placeholders:
 `println!("My cat's name: {0} and she is: {}.", Evil, lovely);`
+
+Within the {} you could use `{dog}` where `dog="Angel"` so for example `println!("My dog's name is {dog}", dog="Angel")`
+or even point to character handling as in hexidecimal `{:x}` or `{:b}` for binary.
+
