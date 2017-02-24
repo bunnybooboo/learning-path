@@ -46,3 +46,6 @@ and an example of the use of the numbered placeholders:
 Within the {} you could use `{dog}` where `dog="Angel"` so for example `println!("My dog's name is {dog}", dog="Angel")`
 or even point to character handling as in hexidecimal `{:x}` or `{:b}` for binary.
 
+More [here](http://doc.rust-lang.org/std/fmt/)
+
+
