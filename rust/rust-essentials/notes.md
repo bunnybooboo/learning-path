@@ -48,4 +48,8 @@ or even point to character handling as in hexidecimal `{:x}` or `{:b}` for binar
 
 More [here](http://doc.rust-lang.org/std/fmt/)
 
+## Value and Primitive Types
 
+All modern computing platforms use 16, 32, 64 bit units, subsequently these are broken down into 8 bit bytes.
+
+**Characters** [D], **integers** [8], **floats** [87.65309], **strings** [Mozillian], all appear as you'd expect in any programming language. As of course do denotions of **binary** - base-2 [0b] e.g `0b100101`, octal - base-8 [0o] e.g `0o61`, and hexidecimal - base-16 [0x] e.g `0x9C`.
