@@ -54,4 +54,6 @@ All modern computing platforms use 16, 32, 64 bit units, subsequently these are 
 
 **Characters** [D], **integers** [8], **floats** [87.65309], **strings** [Mozillian], all appear as you'd expect in any programming language. As of course do denotions of **binary** - base-2 [0b] e.g `0b100101`, **octal** - base-8 [0o] e.g `0o61`, and **hexidecimal** - base-16 [0x] e.g `0x9C`.
 
-Integers are defined as signed or unsigned. Signed is shown with `i`, unsigned with `u`. Integer sizes are size restricted as 8, 16, 32, 64 bit units. These are then shown `u8`, `u16`, `u32`, `u64` and `i8`, and so on. 
+Integers are defined as signed or unsigned. Signed is shown with `i`, unsigned with `u`. Integer sizes are size restricted as 8, 16, 32, 64 bit units. These are then shown `u8`, `u16`, `u32`, `u64` and `i8`, and so on.
+
+Integers become even easier to read using underscores, e.g. `3_456_789`. 
