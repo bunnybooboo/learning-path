@@ -1,4 +1,4 @@
-# Personal notes from the Pack book 'Rust Essentials'
+# Personal notes from the Packt book 'Rust Essentials'
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
 
@@ -59,3 +59,5 @@ Integers are defined as signed or unsigned. Signed is shown with `i`, unsigned w
 Integers become even easier to read using underscores, e.g. `3_456_789`.
 
 **32 bit** **floating point** integers are denoted using `f32` and **64 bit** using `f64`. Explaining this difference further: this is down to the level of accuracy, with 64 bit being more accurate than 32 bit. This might also vary depending on the the use of binary vs decimal as an example. 9 decimal digits accuracy in binary32 against 6 decimal digits accuracy in decimal32. And for even greater accuracy seen in 64 bit - 17 digit accuracy in binary64 against 16 digit accuracy in decimal64. Specification of the integer type might only be *required* when the compiler can't infer which type is used.
+
+Precedence of all the different operators and values are the same as in C-like languages. There are no decrement (--) or increment (++) in rust. An empty value of zero size is witten as `()`. The return value of nothing seen with a function or expression is (no value). Similarly with function which only print to the console. `()` means no value and null is a value.
