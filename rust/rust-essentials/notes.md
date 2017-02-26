@@ -56,4 +56,6 @@ All modern computing platforms use 16, 32, 64 bit units, subsequently these are 
 
 Integers are defined as signed or unsigned. Signed is shown with `i`, unsigned with `u`. Integer sizes are size restricted as 8, 16, 32, 64 bit units. These are then shown `u8`, `u16`, `u32`, `u64` and `i8`, and so on.
 
-Integers become even easier to read using underscores, e.g. `3_456_789`. 
+Integers become even easier to read using underscores, e.g. `3_456_789`.
+
+**32 bit** **floating point** integers are denoted using `f32` and **64 bit** using `f64`. Explaining this difference further: this is down to the level of accuracy, with 64 bit being more accurate than 32 bit. This might also vary depending on the the use of binary vs decimal as an example. 9 decimal digits accuracy in binary32 against 6 decimal digits accuracy in decimal32. And for even greater accuracy seen in 64 bit - 17 digit accuracy in binary64 against 16 digit accuracy in decimal64. Specification of the integer type might only be *required* when the compiler can't infer which type is used.
