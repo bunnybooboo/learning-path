@@ -32,6 +32,8 @@ An example error used in the book `2:22 error: missing lifetime specifier [E0106
 
 ## Printing
 
+Note the `!` forces the output to stdout.
+
 `println!("Helo there, you lovely person!");`
 
 ## String Interpolation
