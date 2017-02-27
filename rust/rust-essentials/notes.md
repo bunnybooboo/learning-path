@@ -67,3 +67,9 @@ Integers become even easier to read using underscores, e.g. `3_456_789`.
 ## The Standard Library
 
 http://doc.rust-lang.org/std/
+
+## Mutable and Immutable Variables
+
+When you set a variable, the default in rust is that it set as immutable. This protects your code from unexpected behaviours, by default. If you are needing a variable to alter through the life of the program, it's wise to set the variable as mutable `mut`.
+
+Variables are set for example `let myVariable = 42;`. If you were to make this variable one which was open to being altered, you would write it as `let mut myVariable = 42;`. In fact this would evoke an error because an integer would ultimately require its type to be set, eg `let mut myVariable: i32 = 42;`.
