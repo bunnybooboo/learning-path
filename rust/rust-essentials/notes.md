@@ -96,8 +96,10 @@ You could assign a name to a type using `type MyType = u8;` then calling the use
 
 ## Expressions
 
-Rust code is mostly written using a series of expressions, collectively known as a statement. Binding a variable is a statement. Calling the variable is an expression. Expressions on their own have little value without a statement.
+Rust is an [expression-oriented language](https://en.wikipedia.org/wiki/Expression-oriented_programming_language). Its code is mostly written using a series of expressions, collectively known as a statement. Binding a variable is a statement. Calling the variable is an expression. Expressions on their own have little value without a statement.
 
 Blocks of code are expressions too. However the expression is suppressed (assigning `()`) if you end the block with a semicolon, and assigning the full expression value if not ending with a semicolon.
 
 It's the standard in Rust to enforce when a statement ends though so most code lines end in a semicolon.
+
+
