@@ -75,3 +75,11 @@ When you set a variable, the default in rust is that it set as immutable. This p
 Variables are set for example `let myVariable = 42;`. If you were to make this variable one which was open to being altered, you would write it as `let mut myVariable = 42;`. In fact this would evoke an error because an integer would ultimately require its type to be set, eg `let mut myVariable: i32 = 42;`.
 
 This can not be done to global constants, though. To do so would be considered dangerous. Rust is trying to protect everyone this way.
+
+## Scope of a Variable and Shadowing
+
+Blocks of code are achieved with `{}`. Code within an inner block is only known to that block, and so on. Shadowing is where a variable is replaced in a code block via `let`.
+
+## Type Checking and Conversions
+
+
