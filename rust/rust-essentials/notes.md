@@ -93,3 +93,11 @@ If you were to convert a floating point to an integer you would lose all the dat
 ## Aliasing
 
 You could assign a name to a type using `type MyType = u8;` then calling the user created variable name 'MyType' again using `let` in a function. If you were to define this variable outside of its type range, in this case outside of the range 0-255 then you'd be hit with an error and compile time `warning: literal out of range for its type.`
+
+## Expressions
+
+Rust code is mostly written using a series of expressions, collectively known as a statement. Binding a variable is a statement. Calling the variable is an expression. Expressions on their own have little value without a statement.
+
+Blocks of code are expressions too. However the expression is suppressed (assigning `()`) if you end the block with a semicolon, and assigning the full expression value if not ending with a semicolon.
+
+It's the standard in Rust to enforce when a statement ends though so most code lines end in a semicolon.
