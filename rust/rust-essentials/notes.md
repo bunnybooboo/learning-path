@@ -88,4 +88,4 @@ Rust is statically typed which means variables stay as they are throughout the l
 
 Concatenating 2 strings together will not happen by default as you have to enforce `.to_string()` or through the use of `format!`. Adding to integers of different type can also not happen unless you cast a conversion using `as`: e.g. `my_variable = chickens as i32;`
 
-
+If you were to convert a floating point to an integer you would lose all the data after the decimal point. This would be the same for a signed value (e.g a negative number) would flip to a positive, if you were to convert it to an unsigned one.
