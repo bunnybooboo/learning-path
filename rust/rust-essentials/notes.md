@@ -124,9 +124,10 @@ Branching takes place using the somewhat standard `if`, `else`, and `if-else`. T
 
 As it's an expression it can be printed or bound to a variable, of course using `let`.
 
-Like in other languages, You can escape a branch using `return;`
+Like in other languages, You can escape a branch using `return;`. All branches within a block must return a value of the same type.
 
 Take care again with code blocks to NOT use a semicolon at the last line else you will return `()`.
+
 ## Looping
 
 ## Functions
