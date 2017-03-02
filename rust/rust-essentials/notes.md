@@ -89,3 +89,7 @@ Rust is statically typed which means variables stay as they are throughout the l
 Concatenating 2 strings together will not happen by default as you have to enforce `.to_string()` or through the use of `format!`. Adding to integers of different type can also not happen unless you cast a conversion using `as`: e.g. `my_variable = chickens as i32;`
 
 If you were to convert a floating point to an integer you would lose all the data after the decimal point. This would be the same for a signed value (e.g a negative number) would flip to a positive, if you were to convert it to an unsigned one.
+
+## Aliasing
+
+You could assign a name to a type using `type MyType = u8;` then calling the user created variable name 'MyType' again using `let` in a function. If you were to define this variable outside of its type range, in this case outside of the range 0-255 then you'd be hit with an error and compile time `warning: literal out of range for its type.`
