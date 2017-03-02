@@ -68,6 +68,8 @@ Integers become even easier to read using underscores, e.g. `3_456_789`.
 
 **Precedence** of all the different operators and values are the same as in C-like languages. **There are no decrement** (--) **or increment** (++) in rust. An **empty value** of zero size is witten as `()`. The **return value of nothing**, seen with a function or expression, is `(no value)`. Similarly with a function which only prints to the console. `()` means no value whereas `null` is a value.
 
+All variables use [snake_case](https://en.wikipedia.org/wiki/Snake_case) convention when creating names.
+
 ## The Standard Library
 
 http://doc.rust-lang.org/std/
@@ -140,7 +142,9 @@ for n in 0..x {x -= 1; print!(x);}
 
 ## Functions
 
-Every program builds using functions. The default function we tend to use is `fn main() {**..**}`
+Every program builds using functions. The default function we tend to use is `fn main() {**..**}`.
+
+Functions are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case)
 
 ## Attributes
 
