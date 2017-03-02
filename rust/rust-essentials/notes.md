@@ -115,3 +115,15 @@ I think of this via a lesson I saw on a computer science MOOC, where the stack w
 You can print the precise location of a stack using `{:p}`.
 
 You could say that the stack is very much affected by the use of variables. Well more that the stack can not be altered. Only by calling a mutable variable as a mutable variable `&mut` can you reuse a mutable variable under a newly created variable name. Attempting to do this with a default variable would throw an error. You must expressly call it as mutable in the variable binding and in its calling.
+
+# Using Function and Control Structures
+
+## Branching on a Condition
+
+## Looping
+
+## Functions
+
+## Attributes
+
+## Testing
