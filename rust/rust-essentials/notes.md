@@ -120,6 +120,13 @@ You could say that the stack is very much affected by the use of variables. Well
 
 ## Branching on a Condition
 
+Branching takes place using the somewhat standard `if`, `else`, and `if-else`. The condition after an if should be a boolean. Code blocks are needed once again using `{}`.
+
+As it's an expression it can be printed or bound to a variable, of course using `let`.
+
+Like in other languages, You can escape a branch using `return;`
+
+Take care again with code blocks to NOT use a semicolon at the last line else you will return `()`.
 ## Looping
 
 ## Functions
