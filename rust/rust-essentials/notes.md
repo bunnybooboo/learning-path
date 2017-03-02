@@ -132,8 +132,11 @@ Take care again with code blocks to NOT use a semicolon at the last line else yo
 
 Looping achieved through the use of `while`. This can also be expressed using syntactic sugar of `loop`. Looping through a range is again similar to other languages in `for n in 0..12 {*..*}`.
 
-The rather standard use of a loop, iterating over a range until it's exhausted, is achieved with ```let mut x = 10;
-for n in 0..x {x -= 1; print!(x);}```
+The rather standard use of a loop, iterating over a range until it's exhausted, is achieved with 
+```
+let mut x = 10;
+for n in 0..x {x -= 1; print!(x);}
+```
 
 ## Functions
 
