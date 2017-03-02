@@ -82,4 +82,10 @@ Blocks of code are achieved with `{}`. Code within an inner block is only known 
 
 ## Type Checking and Conversions
 
+When you compile your code in Rust, types are checked throughout. If there is a mismatch an error will be thrown at compile time. This provides safety that the code will run as expected at runtime, error handling happening when you compile.
+
+Rust is statically typed which means variables stay as they are throughout the lifetime of the program. As previously mentioned variables can be changed using `mut` but also by calling `let` on the variable once again.
+
+Concatenating 2 strings together will not happen by default as you have to enforce `.to_string()` or through the use of `format!`. Adding to integers of different type can also not happen unless you cast a conversion using `as`: e.g. `my_variable = chickens as i32;`
+
 
