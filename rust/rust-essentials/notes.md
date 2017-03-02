@@ -1,4 +1,6 @@
-# Personal notes from the Packt book 'Rust Essentials'
+# **Personal notes from the Packt book 'Rust Essentials'**
+
+# Starting with Rust
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
 
@@ -11,6 +13,8 @@ Rust is not a new language. It's innovative but not reinventing the wheel. It's 
 ## Package and Dependency Manager - Cargo
 
 Rust uses a package and dependency manager called Cargo. This in my brain at least is starting to building something more along the lines of Ruby Gems. I've done a rather brief tutorial on Ruby on Rails so excuse my ignorance if I've technically not got that right. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
+
+#Using Variables and Types
 
 ## Comments
 
