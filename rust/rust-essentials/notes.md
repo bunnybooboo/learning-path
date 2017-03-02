@@ -132,7 +132,7 @@ Take care again with code blocks to NOT use a semicolon at the last line else yo
 
 ## Looping
 
-Looping achieved through the use of `while`. This can also be expressed using syntactic sugar of `loop`. Looping through a range is again similar to other languages in `for n in 0..12 {**..**}`.
+Looping achieved through the use of `while`. This can also be expressed using syntactic sugar of `loop`. Looping through a range is again similar to other languages in `for n in 0..12 {**}`.
 
 The rather standard use of a loop, iterating over a range until it's exhausted, is achieved with 
 ```
@@ -142,7 +142,7 @@ for n in 0..x {x -= 1; print!(x);}
 
 ## Functions
 
-Every program builds using functions. The default function we tend to use is `fn main() {**..**}`.
+Every program builds using functions. The default function we tend to use is `fn main() {**}`.
 
 Functions are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case)
 
