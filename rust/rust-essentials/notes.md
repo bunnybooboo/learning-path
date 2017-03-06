@@ -150,4 +150,6 @@ To publish a function in the documentation it must be prefixed with `pub`.
 
 ## Attributes
 
+Attributes written as `#[...]` are metadata placed before a section code which they describe. They can disable warnings, turn on compiler features, mark unit tests and benchmarks. They can be used to turn certain features on when using a particular operating system. e.g `#[cfg(target_os = "linux")]`
+
 ## Testing
