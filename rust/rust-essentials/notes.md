@@ -1,5 +1,5 @@
-# Personal notes from the Packt book 'Rust Essentials'
-=======================================================
+**Personal notes from the Packt book 'Rust Essentials'**
+===================================================
 
 # Starting with Rust
 
