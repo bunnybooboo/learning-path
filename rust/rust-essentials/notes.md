@@ -157,3 +157,6 @@ To publish a function in the documentation it must be prefixed with `pub`.
 If you use the attribute `#[test]` the code will run only when a test is invoked. If it's compiled as normal then the test will not even be included in the resulting code.
 
 A test will always pass unless you also add the `assert_eq!([actual], [expected]);` macro, which forces a panic unless the result is exact as the enclosed assertion.
+
+In cargo you can create an executable project which is known as a 'crate'. This is done with `mylib`, i.e. `cargo new mylib`. This will add `src` directory with a `lib.rs` file which holds a test template. You can edit this file then run your tests in parallel using `cargo test`.
+
