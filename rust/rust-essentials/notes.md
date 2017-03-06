@@ -153,3 +153,7 @@ To publish a function in the documentation it must be prefixed with `pub`.
 [Attributes](https://doc.rust-lang.org/book/attributes.html) written as `#[...]` are metadata placed before a section code which they describe. They can disable warnings, turn on compiler features, mark unit tests and benchmarks. They can be used to turn certain features on when using a particular operating system. e.g `#[cfg(target_os = "linux")]`
 
 ## Testing
+
+If you use the attribute `#[test]` the code will run only when a test is invoked. If it's compiled as normal then the test will not even be included in the resulting code.
+
+A test will always pass unless you also add the `assert_eq!(...);` macro, which forces a panic unless the result is exact as the enclosed assertion.
