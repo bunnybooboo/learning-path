@@ -167,7 +167,11 @@ In cargo you can create an executable project which is known as a 'crate'. This 
 
 All strings are sequences of UTF-8 bytes of Unicode. These could contain null byes though not null terminated. [Null termination](https://en.wikipedia.org/wiki/Null-terminated_string) in C is required to safely end a string. Rust does away with this need but still retains safety.
 
+There are 2 types of strings: literal or string slices denoted by `&str` [with the statically defined `&`] and `String` [a dynamic string].
+
 ### Array, Vector, and Slices
+
+
 
 ### Tuples
 
