@@ -142,9 +142,9 @@ for n in 0..x {x -= 1; print!(x);}
 
 ## Functions
 
-Every program builds using functions. The default function we tend to use is `fn main() {**}`.
+Every program builds using functions. The default function we tend to use is `fn main() {**}`. They are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case). Functions only return one value, which can be a tuple.
 
-Functions are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case). Functions only return one value, which can be a tuple.
+Documenting functions is done using `///` and then running `rustdoc` against the file. This creates a new `doc` directory with a subdir `exdoc` with an index.html file which can be used to further build out your project website.
 
 ## Attributes
 
