@@ -156,4 +156,4 @@ To publish a function in the documentation it must be prefixed with `pub`.
 
 If you use the attribute `#[test]` the code will run only when a test is invoked. If it's compiled as normal then the test will not even be included in the resulting code.
 
-A test will always pass unless you also add the `assert_eq!(...);` macro, which forces a panic unless the result is exact as the enclosed assertion.
+A test will always pass unless you also add the `assert_eq!([actual], [expected]);` macro, which forces a panic unless the result is exact as the enclosed assertion.
