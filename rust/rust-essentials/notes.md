@@ -1,7 +1,7 @@
 **Personal notes from the Packt book 'Rust Essentials'**
 ===================================================
 
-# Starting with Rust
+## Starting with Rust
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
 
@@ -11,37 +11,37 @@ Rust uses a similar compilation method to C (clang) where you would `make` >> `i
 
 Rust is not a new language. It's innovative but not reinventing the wheel. It's taking may of the good parts of other languages and upping the game.
 
-## Package and Dependency Manager - Cargo
+### Package and Dependency Manager - Cargo
 
 Rust uses a package and dependency manager called Cargo. This in my brain at least is starting to building something more along the lines of Ruby Gems. I've done a rather brief tutorial on Ruby on Rails so excuse my ignorance if I've technically not got that right. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
 
-#Using Variables and Types
+## Using Variables and Types
 
-## Comments
+### Comments
 
 Commenting works very much like other languages. To comment you use `//` for line comments (the preferred method in Rust). To open block comment `/*` and to close `*/`. For a documentation comment you should use `///`.
 
-## Simple Constants
+### Simple Constants
 
 This appears *after* the section on Global Constants in the book. (TBD) edit so the readability has more info here first.
 
 Simple constants are set using `const`. For example to set a constant 'PI' as a floating point integer you would write `const PI: f32 = 3.142` allowing you to evoke PI in your application when you compile.
 
-## Global Constants
+### Global Constants
 
 Resources and constants are defined in the header, just like in other languages. Constants are set by the keyword `static`. Naming convention is in all caps and underscores. They should also be indicated using `i32` for integers, or `str` for strings. Rust has a limited lifetime on objects. `static` is the longest possible age you can add to your code. It will remain available throughout the lifetime of the application.
 
-## Error Handling
+### Error Handling
 
 An example error used in the book `2:22 error: missing lifetime specifier [E0106]` shows the error is on line 2, at position 22 (including spaces!)
 
-## Printing
+### Printing
 
 Note the `!` forces the output to stdout.
 
 `println!("Helo there, you lovely person!");`
 
-## String Interpolation
+### String Interpolation
 
 This happens via print where items are inserted using the placeholder characters '{}' and even as '{0}', '{1}'.
 
@@ -55,7 +55,7 @@ or even point to character handling as in hexidecimal `{:x}` or `{:b}` for binar
 
 More [here](http://doc.rust-lang.org/std/fmt/)
 
-## Value and Primitive Types
+### Value and Primitive Types
 
 All modern computing platforms use 16, 32, 64 bit units, subsequently these are broken down into 8 bit bytes.
 
@@ -71,11 +71,11 @@ Integers become even easier to read using underscores, e.g. `3_456_789`.
 
 All variables use [snake_case](https://en.wikipedia.org/wiki/Snake_case) convention when creating names.
 
-## The Standard Library
+### The Standard Library
 
 http://doc.rust-lang.org/std/
 
-## Mutable and Immutable Variables
+### Mutable and Immutable Variables
 
 When you set a variable, the default in rust is that it set as immutable. This protects your code from unexpected behaviours, by default. If you are needing a variable to alter through the life of the program, it's wise to set the variable as mutable `mut`.
 
@@ -83,11 +83,11 @@ Variables are set for example `let myVariable = 42;`. If you were to make this v
 
 This can not be done to global constants, though. To do so would be considered dangerous. Rust is trying to protect everyone this way.
 
-## Scope of a Variable and Shadowing
+### Scope of a Variable and Shadowing
 
 Blocks of code are achieved with `{}`. Code within an inner block is only known to that block, and so on. Shadowing is where a variable is replaced in a code block via `let`.
 
-## Type Checking and Conversions
+### Type Checking and Conversions
 
 When you compile your code in Rust, types are checked throughout. If there is a mismatch an error will be thrown at compile time. This provides safety that the code will run as expected at runtime, error handling happening when you compile.
 
@@ -97,7 +97,7 @@ Concatenating 2 strings together will not happen by default as you have to enfor
 
 If you were to convert a floating point to an integer you would lose all the data after the decimal point. This would be the same for a signed value (e.g a negative number) would flip to a positive, if you were to convert it to an unsigned one.
 
-## Aliasing
+### Aliasing
 
 You could assign a name to a type using `type MyType = u8;` then calling the user created variable name 'MyType' again using `let` in a function. If you were to define this variable outside of its type range, in this case outside of the range 0-255 then you'd be hit with an error and compile time `warning: literal out of range for its type.`
 
@@ -109,7 +109,7 @@ Blocks of code are expressions too. However the expression is suppressed (assign
 
 It's the standard in Rust to enforce when a statement ends though so most code lines end in a semicolon.
 
-## Stack/Heap
+### Stack/Heap
 
 They give an example explanation from stackoverflow. Here's [the direct link](http://stackoverflow.com/a/80113) to the answer.
 
@@ -119,9 +119,9 @@ You can print the precise location of a stack using `{:p}`.
 
 You could say that the stack is very much affected by the use of variables. Well more that the stack can not be altered. Only by calling a mutable variable as a mutable variable `&mut` can you reuse a mutable variable under a newly created variable name. Attempting to do this with a default variable would throw an error. You must expressly call it as mutable in the variable binding and in its calling.
 
-# Using Function and Control Structures
+## Using Function and Control Structures
 
-## Branching on a Condition
+### Branching on a Condition
 
 Branching takes place using the somewhat standard `if`, `else`, and `if-else`. The condition after an if should be a boolean. Code blocks are needed once again using `{}`.
 
@@ -131,7 +131,7 @@ Like in other languages, You can escape a branch using `return;`. All branches w
 
 Take care again with code blocks to NOT use a semicolon at the last line else you will return `()`.
 
-## Looping
+### Looping
 
 Looping achieved through the use of `while`. This can also be expressed using syntactic sugar of `loop`. Looping through a range is again similar to other languages in `for n in 0..12 {**}`.
 
@@ -141,7 +141,7 @@ let mut x = 10;
 for n in 0..x {x -= 1; print!(x);}
 ```
 
-## Functions
+### Functions
 
 Every program builds using functions. The default function we tend to use is `fn main() {**}`. They are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case). Functions only return one value, which can be a tuple.
 
@@ -149,11 +149,11 @@ Documenting functions is done using `///`, writing in Markdown, and then running
 
 To publish a function in the documentation it must be prefixed with `pub`.
 
-## Attributes
+### Attributes
 
 [Attributes](https://doc.rust-lang.org/book/attributes.html) written as `#[...]` are metadata placed before a section code which they describe. They can disable warnings, turn on compiler features, mark unit tests and benchmarks. They can be used to turn certain features on when using a particular operating system. e.g `#[cfg(target_os = "linux")]`
 
-## Testing
+### Testing
 
 If you use the attribute `#[test]` the code will run only when a test is invoked. If it's compiled as normal then the test will not even be included in the resulting code.
 
@@ -161,20 +161,20 @@ A test will always pass unless you also add the `assert_eq!([actual], [expected]
 
 In cargo you can create an executable project which is known as a 'crate'. This is done with `mylib`, i.e. `cargo new mylib`. This will add `src` directory with a `lib.rs` file which holds a test template. You can edit this file then run your tests in parallel using `cargo test`.
 
-# Structuring Data and Matching Patterns
+## Structuring Data and Matching Patterns
 
-## Strings
+### Strings
 
-## Array, Vector, and Slices
+### Array, Vector, and Slices
 
-## Tuples
+### Tuples
 
-## Structs
+### Structs
 
-## Enum
+### Enum
 
-## Getting Input from the Console
+### Getting Input from the Console
 
-## Matching Patterns
+### Matching Patterns
 
 
