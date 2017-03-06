@@ -144,7 +144,7 @@ for n in 0..x {x -= 1; print!(x);}
 
 Every program builds using functions. The default function we tend to use is `fn main() {**}`.
 
-Functions are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case)
+Functions are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case). Functions only return one value, which can be a tuple.
 
 ## Attributes
 
