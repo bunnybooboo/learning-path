@@ -160,3 +160,20 @@ A test will always pass unless you also add the `assert_eq!([actual], [expected]
 
 In cargo you can create an executable project which is known as a 'crate'. This is done with `mylib`, i.e. `cargo new mylib`. This will add `src` directory with a `lib.rs` file which holds a test template. You can edit this file then run your tests in parallel using `cargo test`.
 
+# Structuring Data and Matching Patterns
+
+## Strings
+
+## Array, Vector, and Slices
+
+## Tuples
+
+## Structs
+
+## Enum
+
+## Getting Input from the Console
+
+## Matching Patterns
+
+
