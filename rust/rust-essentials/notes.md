@@ -146,6 +146,8 @@ Every program builds using functions. The default function we tend to use is `fn
 
 Documenting functions is done using `///`, writing in Markdown, and then running `rustdoc` against the file. This creates a new `doc` directory with a subdir `exdoc` with an index.html file which can be used to further build out your project website. If using cargo, you would need to use `cargo doc`. 
 
+To publish a function in the documentation it must be prefixed with `pub`.
+
 ## Attributes
 
 ## Testing
