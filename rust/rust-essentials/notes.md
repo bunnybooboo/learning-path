@@ -189,9 +189,14 @@ Arrays observe similar behaviour to most other languages. e.g. `println!(fruits[
 
 To observe the length of a string use the method `.len()`. An alternative for selecting the last in the array is `fruits.iter().last().unwrap();`.
 
-You could create a pointer reference to the original array and iterate over this. e.g ```let food = &fruits;
-println!("Have you tried a {}?", food[2]);```
+Yo could create a pointer reference to the original array and iterate over this. e.g 
+```
+let food = &fruits;
+println!("Have you tried a {}?", food[2]);
+```
 prints `Have you tried a durian?`
+
+Looping over an array can be achieved using `for x in 0..fruits.len() {...}`, but thiscan get memory intensive so this is used in preference `for x in fruit.iter() {...}`.
 
 ### Tuples
 
