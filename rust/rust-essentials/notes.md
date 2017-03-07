@@ -173,6 +173,8 @@ You can turn a string slice into a String running  the `.to_string` method, and 
 
 Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString { println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack.
 
+To append a string with a character use `push`, to append a string with a string use `push_str`. e.g. `thisString.push_string("My dog is always hungry.");`
+
 ### Array, Vector, and Slices
 
 
