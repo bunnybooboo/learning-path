@@ -5,7 +5,7 @@
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
 
-As I'm using [Arch Linux](https://www.archlinux.org/) the terminal command to install Rustup is `sudo pacman -Sy rustup`. For other versions head [HERE](https://github.com/rust-lang-nursery/rustup.rs)
+As I'm using [Arch Linux](https://www.archlinux.org/) the terminal command to install Rustup is `sudo pacman -Sy rustup`. For all versions of Rustup head [HERE](https://github.com/rust-lang-nursery/rustup.rs)
 
 Rust uses a similar compilation method to C ([Clang](https://en.wikipedia.org/wiki/Clang)) where you would `make` >> `install` >> execute. The one for Rust is called rustc, where you write >> compile >> execute.
 
