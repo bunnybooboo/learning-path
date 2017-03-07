@@ -41,6 +41,8 @@ Note the `!` forces the output to stdout.
 
 `println!("Hello there, you lovely person.");`
 
+To print the characters from a string use the method `.char()`. Their example is essentially `for c in thisString.chard() {print!("{} - ", c)}`.
+
 ### String Interpolation
 
 This happens via print where items are inserted using the placeholder characters '{}' and even as '{0}', '{1}'.
@@ -113,7 +115,7 @@ It's the standard in Rust to enforce when a statement ends though so most code l
 
 They give an example explanation from stackoverflow. Here's [the direct link](http://stackoverflow.com/a/80113) to the answer.
 
-I think of this via a lesson I saw on a computer science MOOC, where the stack was represented by a stack of toy hoop rings on a post, and the heap represented by the are where calculation took place. That helped me visualise better.
+I think of this via a lesson I saw on a computer science MOOC (CS50?), where the stack was represented by a stack of toy hoop rings on a post, and the heap represented by the are where calculation took place. That helped me visualise better.
 
 You can print the precise location of a stack using `{:p}`.
 
@@ -167,13 +169,17 @@ In cargo you can create an executable project which is known as a 'crate'. This 
 
 All strings are sequences of UTF-8 bytes of Unicode. These could contain null byes though not null terminated. [Null termination](https://en.wikipedia.org/wiki/Null-terminated_string) in C is required to safely end a string. Rust does away with this need but still retains safety.
 
-There are 2 types of strings: literal or string slices denoted by `&str` which is immutable and fixed size; `&'static` for statically allocated [both via `std::str`] more [HERE](https://doc.rust-lang.org/std/primitive.str.html); or `String` a dynamic string [via `std::string`] more [HERE](https://doc.rust-lang.org/std/string/index.html).
+There are 2 types of strings: literal or string slices denoted by `&str` which is immutable/fixed size; `&'static` for statically allocated [both via `std::str`] more [HERE](https://doc.rust-lang.org/std/primitive.str.html); or `String` a mutable/dynamic string [via `std::string`] more [HERE](https://doc.rust-lang.org/std/string/index.html).
 
 You can turn a string slice into a String running  [this](https://doc.rust-lang.org/std/primitive.str.html#method.to_string) `.to_string` method, and a String into a string slice by adding `&` before the String name.
 
-Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString {println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack.
+Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString {println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack. It's simply a view of the original String and the go to method for manipulating strings.
 
 To append a string with a character use `push`, to append a string with a string use `push_str`. e.g. `thisString.push_string("My dog is always hungry.");`
+
+Splitting a string is done using the method `.split()`, where the contents of `()` are the character where the split will occur.
+
+If you need to edit the beginning of a string you can use the method `.replace([orginal], [replacement])`. This will allocate a new version of the string in memory.
 
 ### Array, Vector, and Slices
 
