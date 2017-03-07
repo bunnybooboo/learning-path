@@ -196,7 +196,7 @@ println!("Have you tried a {}?", food[2]);
 ```
 prints `Have you tried a durian?`
 
-Looping over an array can be achieved using `for x in 0..fruits.len() {...}`, but thiscan get memory intensive so this is used in preference `for x in fruit.iter() {...}`. This could be reduced to `for x in &fruits {...}`.
+Looping over an array can be achieved using `for x in 0..fruits.len() {...}`, but thiscan get memory intensive so this is used in preference `for x in fruits.iter() {...}`. This could be reduced to `for x in &fruits {...}`.
 
 ### Tuples
 
