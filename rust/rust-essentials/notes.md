@@ -5,15 +5,15 @@
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
 
-As I'm using Arch Linux the terminal command to install Rustup is `sudo pacman -Sy rustup`. For other version head over to https://github.com/rust-lang-nursery/rustup.rs
+As I'm using [Arch Linux](https://www.archlinux.org/) the terminal command to install Rustup is `sudo pacman -Sy rustup`. For other versions head [HERE](https://github.com/rust-lang-nursery/rustup.rs)
 
-Rust uses a similar compilation method to C (clang) where you would `make` >> `install` >> execute. The one for Rust is called rustc, where you write >> compile >> execute.
+Rust uses a similar compilation method to C ([Clang](https://en.wikipedia.org/wiki/Clang)) where you would `make` >> `install` >> execute. The one for Rust is called rustc, where you write >> compile >> execute.
 
 Rust is not a new language. It's innovative but not reinventing the wheel. It's taking may of the good parts of other languages and upping the game.
 
 ### Package and Dependency Manager - Cargo
 
-Rust uses a package and dependency manager called Cargo. This in my brain at least is starting to building something more along the lines of Ruby Gems. I've done a rather brief tutorial on Ruby on Rails so excuse my ignorance if I've technically not got that right. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
+Rust uses a package and dependency manager called [Cargo](http://doc.crates.io/). This in my brain at least is starting to building something more along the lines of [Ruby Gems](https://rubygems.org/) and [NPM](https://www.npmjs.com/). I've done a rather brief tutorial on [Ruby on Rails](http://rubyonrails.org/) so excuse my ignorance if I've technically got that incorrect. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
 
 ## Using Variables and Types
 
@@ -85,7 +85,7 @@ This can not be done to global constants, though. To do so would be considered d
 
 ### Scope of a Variable and Shadowing
 
-Blocks of code are achieved with `{}`. Code within an inner block is only known to that block, and so on. Shadowing is where a variable is replaced in a code block via `let`.
+Blocks of code are achieved with `{}`. Code within an inner block is only known to that block, and so on. [Shadowing](http://rustbyexample.com/variable_bindings/scope.html) is where a variable is replaced in a code block via `let`.
 
 ### Type Checking and Conversions
 
@@ -167,11 +167,11 @@ In cargo you can create an executable project which is known as a 'crate'. This 
 
 All strings are sequences of UTF-8 bytes of Unicode. These could contain null byes though not null terminated. [Null termination](https://en.wikipedia.org/wiki/Null-terminated_string) in C is required to safely end a string. Rust does away with this need but still retains safety.
 
-There are 2 types of strings: literal or string slices denoted by `&str` which is immutable and fixed size; `&'static` for statically allocated [both via `std::str`]; or `String` a dynamic string [via `std::string`].
+There are 2 types of strings: literal or string slices denoted by `&str` which is immutable and fixed size; `&'static` for statically allocated [both via `std::str`] more [HERE](https://doc.rust-lang.org/std/primitive.str.html); or `String` a dynamic string [via `std::string`] more [HERE](https://doc.rust-lang.org/std/string/index.html).
 
-You can turn a string slice into a String running  the `.to_string` method, and a String into a string slice by adding `&` before the String name.
+You can turn a string slice into a String running  [this](https://doc.rust-lang.org/std/primitive.str.html#method.to_string) `.to_string` method, and a String into a string slice by adding `&` before the String name.
 
-Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString { println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack.
+Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString {println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack.
 
 To append a string with a character use `push`, to append a string with a string use `push_str`. e.g. `thisString.push_string("My dog is always hungry.");`
 
