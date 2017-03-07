@@ -183,13 +183,13 @@ If you need to edit the beginning of a string you can use the method `.replace([
 
 ### Array, Vector, and Slices
 
-Arrays are created using `[...]` with each entry separated by a comma. e.g. `letfruits = ["apple", "banana", "durian", "mango", "orange", "rambutan"];`. This example has declared an immutable array, if you wish to make it mutable you add the `mut` prefix. You can further define an array initialisation using its type and the number of items in the array, e.g. `let mut faveFruits: [&str, 2] = ["apple", "oranges"];`
+[Arrays](https://doc.rust-lang.org/std/primitive.array.html) are created using `[...]` with each entry separated by a comma. e.g. `letfruits = ["apple", "banana", "durian", "mango", "orange", "rambutan"];`. This example has declared an immutable array, if you wish to make it mutable you add the `mut` prefix. You can further define an array initialisation using its type and the number of items in the array, e.g. `let mut faveFruits: [&str, 2] = ["apple", "oranges"];`
 
 Arrays observe similar behaviour to most other languages. e.g. `println!(fruits[0])` would print `apple`. You'd use `-1` to select the last in the array, and so on.
 
 To observe the length of a string use the method `.len()`. An alternative for selecting the last in the array is `fruits.iter().last().unwrap();`.
 
-Yo could create a pointer reference to the original array and iterate over this. e.g 
+You could create a pointer reference to the original array and iterate over this. e.g 
 ```
 let food = &fruits;
 println!("Have you tried a {}?", food[2]);
@@ -197,6 +197,8 @@ println!("Have you tried a {}?", food[2]);
 prints `Have you tried a durian?`
 
 Looping over an array can be achieved using `for x in 0..fruits.len() {...}`, but thiscan get memory intensive so this is used in preference `for x in fruits.iter() {...}`. This could be reduced to `for x in &fruits {...}`.
+
+[Vectors](https://doc.rust-lang.org/std/vec/index.html) are an array which is specifically allocated to the heap.
 
 ### Tuples
 
