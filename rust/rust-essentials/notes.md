@@ -167,7 +167,11 @@ In cargo you can create an executable project which is known as a 'crate'. This 
 
 All strings are sequences of UTF-8 bytes of Unicode. These could contain null byes though not null terminated. [Null termination](https://en.wikipedia.org/wiki/Null-terminated_string) in C is required to safely end a string. Rust does away with this need but still retains safety.
 
-There are 2 types of strings: literal or string slices denoted by `&str` [immutable and fixed size] and `&'static` for statically allocated [both via `std::str`]; or `String` a dynamic string [via `std::string`].
+There are 2 types of strings: literal or string slices denoted by `&str` which is immutable and fixed size; `&'static` for statically allocated [both via `std::str`]; or `String` a dynamic string [via `std::string`].
+
+You can turn a string slice into a String running  the `.to_string` method, and a String into a string slice by adding `&` before the String name.
+
+Their advice when inspecting strings is to use something along the lines of `if &thisString == thatString { println!("It's the same string")}`. This way conserves resources, where using `to_string()` uses the heap stack.
 
 ### Array, Vector, and Slices
 
