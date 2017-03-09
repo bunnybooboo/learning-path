@@ -198,7 +198,15 @@ prints `Have you tried a durian?`
 
 Looping over an array can be achieved using `for x in 0..fruits.len() {...}`, but thiscan get memory intensive so this is used in preference `for x in fruits.iter() {...}`. This could be reduced to `for x in &fruits {...}`.
 
-[Vectors](https://doc.rust-lang.org/std/vec/index.html) are an array which is specifically allocated to the heap.
+[Vectors](https://doc.rust-lang.org/std/vec/index.html) are an array which is specifically allocated to the heap. They are often written in documentation as a generic `Vec<T>` with the `T` or 'type' outlined by your code. e.g `Vec<u64>` and `Vec<&str>`.
+
+They are initiated using `new()` or the macro `vec!`
+```
+let mut chickens: Vec<u64> = Vec::new();
+let mut magic_chickens = vec![4_294_967_300u64, 35, 8675309]
+```
+Note that last one sets the vector type with the type trailing the data, thus setting the rest of the data with the same type. You can not mix types!
+
 
 ### Tuples
 
