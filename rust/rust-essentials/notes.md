@@ -216,6 +216,8 @@ Indexing, looping, and length work the same with a vector as you would expect wi
 
 [Slices](https://doc.rust-lang.org/std/slice/) uses a safe prcoess in rust to view a portion of an array or vector, without the need to copy. This works like it does in Javascript, so you are taking your portion from with `[]` with the starting numbered position and the range only going as far up to (but not including) the last position. So for example `[0..10]` would select the first position through to the eigth position (10 in this example is in fact the 9th position so we would have the 8th selected).
 
+For the first time they explain what the `&` means in the rust code. It means that you are making use of an item which already held in memory. They run just like vectors in that they are generic and need defining with a TYPE and their size isn't required at compiling.
+
 ### Tuples
 
 ### Structs
