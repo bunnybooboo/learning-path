@@ -218,8 +218,7 @@ Indexing, looping, and length work the same with a vector as you would expect wi
 
 For the first time they explain what the `&` means in the rust code. It means that you are making use of an item which already held in memory. They run just like vectors in that they are generic and need defining with a TYPE and their size isn't required at compiling.
 
-[String and Arrays]() can again use the `chars()` method to iterate over all the items and you could also add `sort()` which would sort via capital letters ahead of smalls, then ordering them in alphabetic order. With a range or vector of intgers this would of course be in numerical order. 
-
+[String and Arrays]() can again use the `chars()` method to iterate over all the items and you could also add `sort()` which would sort via capital letters ahead of smalls, then ordering them in alphabetic order. Added to this is the `split()` returns a subslice matching your own set preconditions. With a range or vector of integers this would of course be in numerical order. You could also mix together a bunch of these methods to split, sort etc in combination.
 ### Tuples
 
 ### Structs
