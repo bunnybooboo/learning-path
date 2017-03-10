@@ -212,7 +212,7 @@ It's possible to construct a vector with specific size, e.g. `let mut : Vec<i32>
 let itvec: Vec<u32> = (0..12).collect();
 println!("Here's the range you seek: {:?}", itvec);
 ```
-Indexing, looping, and length work the same with a vector as you would expect with an array. To add to the end of a vector you should use `push()` and `pop()`.
+Indexing, looping, and length work the same with a vector as you would expect with an array. To add to the end of a vector you should use `push()` and `pop()`. As previously mentioned, you can only return ONE item, so you can return an arrays or a vector in that one slot.
 
 ### Tuples
 
