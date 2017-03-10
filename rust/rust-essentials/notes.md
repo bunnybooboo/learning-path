@@ -207,6 +207,12 @@ let mut magic_chickens = vec![4_294_967_300u64, 35, 8675309]
 ```
 Note that last one sets the vector type with the type trailing the data, thus setting the rest of the data with the same type. You can not mix types!
 
+It's possible to construct a vector with specific size, e.g. `let mut : Vec<i32> = Vec::with_capacity(15)` would restrict your vector to one which was 15 characters long. It's also possible to construct a vector using an iterating using a the method `.collect()` for example:
+```
+let itvec: Vec<u32> = (0..12).collect();
+println!("Here's the range you seek: {:?}", itvec);
+```
+Indexing, looping, and length work the same with a vector as you would expect with an array. To add to the end of a vector you should use `push()` and `pop()`.
 
 ### Tuples
 
