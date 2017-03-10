@@ -214,6 +214,8 @@ println!("Here's the range you seek: {:?}", itvec);
 ```
 Indexing, looping, and length work the same with a vector as you would expect with an array. To add to the end of a vector you should use `push()` and `pop()`. As previously mentioned, you can only return ONE item, so you can return an arrays or a vector in that one slot.
 
+[Slices](https://doc.rust-lang.org/std/slice/) uses a safe prcoess in rust to view a portion of an array or vector, without the need to copy. This works like it does in Javascript, so you are taking your portion from with `[]` with the starting numbered position and the range only going as far up to (but not including) the last position. So for example `[0..10]` would select the first position through to the eigth position (10 in this example is in fact the 9th position so we would have the 8th selected).
+
 ### Tuples
 
 ### Structs
