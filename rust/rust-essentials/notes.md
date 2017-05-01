@@ -137,7 +137,7 @@ Take care again with code blocks to NOT use a semicolon at the last line else yo
 
 Looping achieved through the use of `while`. This can also be expressed using syntactic sugar of `loop`. Looping through a range is again similar to other languages in `for n in 0..12 {**}`.
 
-The rather standard use of a loop, iterating over a range until it's exhausted, is achieved with 
+The rather standard use of a loop, iterating over a range until it's exhausted, is achieved with
 ```
 let mut x = 10;
 for n in 0..x {x -= 1; print!(x);}
@@ -147,7 +147,7 @@ for n in 0..x {x -= 1; print!(x);}
 
 Every program builds using functions. The default function we tend to use is `fn main() {**}`. They are named like variables using [snake_case](https://en.wikipedia.org/wiki/Snake_case). Functions only return one value, which can be a tuple.
 
-Documenting functions is done using `///`, writing in Markdown, and then running `rustdoc` against the file. This creates a new `doc` directory with a subdir `exdoc` with an index.html file which can be used to further build out your project website. If using cargo, you would need to use `cargo doc`. 
+Documenting functions is done using `///`, writing in Markdown, and then running `rustdoc` against the file. This creates a new `doc` directory with a subdir `exdoc` with an index.html file which can be used to further build out your project website. If using cargo, you would need to use `cargo doc`.
 
 To publish a function in the documentation it must be prefixed with `pub`.
 
@@ -189,7 +189,7 @@ Arrays observe similar behaviour to most other languages. e.g. `println!(fruits[
 
 To observe the length of a string use the method `.len()`. An alternative for selecting the last in the array is `fruits.iter().last().unwrap();`.
 
-You could create a pointer reference to the original array and iterate over this. e.g 
+You could create a pointer reference to the original array and iterate over this. e.g
 ```
 let food = &fruits;
 println!("Have you tried a {}?", food[2]);
@@ -216,9 +216,11 @@ Indexing, looping, and length work the same with a vector as you would expect wi
 
 [Slices](https://doc.rust-lang.org/std/slice/) uses a safe prcoess in rust to view a portion of an array or vector, without the need to copy. This works like it does in Javascript, so you are taking your portion from with `[]` with the starting numbered position and the range only going as far up to (but not including) the last position. So for example `[0..10]` would select the first position through to the eigth position (10 in this example is in fact the 9th position so we would have the 8th selected).
 
+Slices are in fact a way to emphatically state the size of an array or vector at that moment. There is no possible way of running off the end of an array, as the slice knows its own length.
+
 For the first time they explain what the `&` means in the rust code. It means that you are making use of an item which already held in memory. They run just like vectors in that they are generic and need defining with a TYPE and their size isn't required at compiling.
 
-[String and Arrays]() can again use the `chars()` method to iterate over all the items and you could also add `sort()` which would sort via capital letters ahead of smalls, then ordering them in alphabetic order. Added to this is the `split()` returns a subslice matching your own set preconditions. With a range or vector of integers this would of course be in numerical order. You could also mix together a bunch of these methods to split, sort etc in combination.
+[Strings](https://doc.rust-lang.org/std/string/index.html) and [Arrays](https://doc.rust-lang.org/std/primitive.array.html) can again use the `chars()` method to iterate over all the items and you could also add `sort()` which would sort via capital letters ahead of smalls, then ordering them in alphabetic order. Added to this is the `split()` returns a subslice matching your own set preconditions. With a range or vector of integers this would of course be in numerical order. You could also mix together a bunch of these methods to split, sort etc in combination.
 ### Tuples
 
 ### Structs
@@ -228,5 +230,3 @@ For the first time they explain what the `&` means in the rust code. It means th
 ### Getting Input from the Console
 
 ### Matching Patterns
-
-
