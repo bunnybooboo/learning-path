@@ -221,7 +221,12 @@ Slices are in fact a way to emphatically state the size of an array or vector at
 For the first time they explain what the `&` means in the rust code. It means that you are making use of an item which already held in memory. They run just like vectors in that they are generic and need defining with a TYPE and their size isn't required at compiling.
 
 [Strings](https://doc.rust-lang.org/std/string/index.html) and [Arrays](https://doc.rust-lang.org/std/primitive.array.html) can again use the `chars()` method to iterate over all the items and you could also add `sort()` which would sort via capital letters ahead of smalls, then ordering them in alphabetic order. Added to this is the `split()` returns a subslice matching your own set preconditions. With a range or vector of integers this would of course be in numerical order. You could also mix together a bunch of these methods to split, sort etc in combination.
-### Tuples
+
+A string is backed up a chars() array and is a vector of bytes; allowing a slice using the &str type from a String, and the collect() method from this chars() into a Vec<T>.
+
+[Tuples](https://doc.rust-lang.org/nightly/std/primitive.tuple.html) to combine multiple types you use a special array called a tuple. This uses parenthases and its internal separator are commas. We saw an example of tuples when adding multiple items into println!();
+
+ 
 
 ### Structs
 
