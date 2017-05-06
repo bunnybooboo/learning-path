@@ -267,7 +267,7 @@ Tuples can only be compared or assigned to each other when the same type. You wo
 
 ### Enum
 
-Enum is for when there is a limited number of values. For example, 
+[Enum](https://doc.rust-lang.org/book/enums.html) is for when there is a limited number of values. For example, 
 ```
 enum Directions{
   Left, Right, Forward, Back, Up, Down
