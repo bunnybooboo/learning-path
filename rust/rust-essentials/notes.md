@@ -304,4 +304,6 @@ Result is the ouput you get from the code when everything runs successfully, or 
 
 ### Getting Input from the Console
 
+Rust, as you might expect, has the ability to read input from the user. This is achieved through the use of the `stdin()` function from the `io` module in the `std` crate: 
+
 ### Matching Patterns
