@@ -226,6 +226,10 @@ A string is backed up a chars() array and is a vector of bytes; allowing a slice
 
 [Tuples](https://doc.rust-lang.org/nightly/std/primitive.tuple.html) to combine multiple types you use a special array called a tuple. This uses parenthases and its internal separator are commas. We saw an example of tuples when adding multiple items into println!();
 
+If calling a tuple and wishing to skip an item from within it you can match the pattern but replace a field with '\_'.
+
+Tuples can only be compared or assigned to each other when the same type. You would create a new tuple with a collection of the others is you needed to work with different types.
+
  
 
 ### Structs
