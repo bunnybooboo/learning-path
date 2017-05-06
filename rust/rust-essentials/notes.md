@@ -261,9 +261,9 @@ If calling a tuple and wishing to skip an item from within it you can match the 
 
 Tuples can only be compared or assigned to each other when the same type. You would create a new tuple with a collection of the others is you needed to work with different types.
 
-
-
 ### Structs
+
+[Structs]() are in essence tuple templates, bringing together a variety of types into structured framework. You could create a struct using one field, known as a newtype, or as a `key: value` pair, each pair separated by a comma. Similar to classes in other languages. Always starts with a capital letter and further named using camel case. Has to be declared as mutable if its fields can alter.
 
 ### Enum
 
