@@ -4,6 +4,7 @@
 1. [Starting with Rust](#starting-with-rust)
 2. [Cargo](#packaga-and-dependency-manager-cargo)
 3. [Using Variables and Types](#using-variables-and-types)
+  
   * [Comments](#comments)
   * [Simple Constants](#simple-constants)
   * [Global Constants](#global-constants)
@@ -16,6 +17,7 @@
   * [Scope of a Variable & Shadowing](#scope-of-a-variable-and-shadowing)
   * [Type Checking and Conversions](#type-checking-and-conversions)
   * [Aliasing](#aliasing)
+
 4. [Expressions](#expressions)
   * [Stack/Heap](#stackheap)
 5. [Using Function and Control Structures](#using-function-and-control-structures)
