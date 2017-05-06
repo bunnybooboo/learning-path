@@ -263,7 +263,7 @@ Tuples can only be compared or assigned to each other when the same type. You wo
 
 ### Structs
 
-[Structs]() are in essence tuple templates, bringing together a variety of types into structured framework. You could create a struct using one field, known as a newtype, or as a `key: value` pair, each pair separated by a comma. Similar to classes in other languages. Always starts with a capital letter and further named using camel case. Has to be declared as mutable if its fields can alter.
+[Structs](https://doc.rust-lang.org/book/structs.html) are in essence tuple templates, bringing together a variety of types into structured framework. You could create a struct using one field, known as a newtype, or as a `key: value` pair, each pair separated by a comma. You could also rename values to something more shorthand using a `let`. Similar to classes in other languages. Always starts with a capital letter and further named using camel case. Has to be declared as mutable if its fields can alter.
 
 ### Enum
 
