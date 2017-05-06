@@ -267,6 +267,34 @@ Tuples can only be compared or assigned to each other when the same type. You wo
 
 ### Enum
 
+Enum is for when there is a limited number of values. For example, 
+```
+enum Directions{
+  Left, Right, Forward, Back, Up, Down
+}
+```
+And using it:
+```
+let direction = Directions::Left;
+```
+Their values can be various types or structs:
+```
+type sprite = &'static str;
+
+enum GoodSprite {
+  Sparkle(sprite, i32),
+  Rainbow(sprite, i32)  
+}
+
+let first = GoodSprite::Rainbow("Fabuloso", 88);
+```
+Another cool thing for code clarity is that you can further split out the enum value, making the let call much shorter by using `use`:
+```
+use GoodSprite::Rainbow;
+
+let first = Rainbow("Fabuloso", 88);
+```
+
 ### Getting Input from the Console
 
 ### Matching Patterns
