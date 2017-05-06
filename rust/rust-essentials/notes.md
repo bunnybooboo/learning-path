@@ -1,6 +1,37 @@
 **Personal notes from the Packt book 'Rust Essentials'**
 ===================================================
 
+1. [Starting with Rust](#starting-with-rust)
+2. [Cargo](#packaga-and-dependency-manager-cargo)
+3. [Using Variables and Types](#using-variables-and-types)
+  1. [Comments](#comments)
+  2. [Simple Constants](#simple-constants)
+  3. [Global Constants](#global-constants)
+  4. [Error Handling](#error-handling)
+  5. [Printing](#printing)
+  6. [String Interpolation](#string-interpolation)
+  7. [Value and Primitive Types](#value-and-primitive-types)
+  8. [The Standard Library](#the-standard-library)
+  9. [Mutable and Immutable Variables](#mutable-and-immmurable-variables)
+  10. [Scope of a Variable & Shadowing](#scope-of-a-variable-and-shadowing)
+  11. [Type Checking and Conversions](#type-checking-and-conversions)
+  12. [Aliasing](#aliasing)
+4. [Expressions](#expressions)
+  1. [Stack/Heap](#stackheap)
+5. [Using Function and Control Structures](#using-function-and-control-structures)
+  1. [Branching a Condition](#branching-a-condition)
+  2. [Looping](#looping)
+  3. [Functions](#functions)
+  4. [Attributes](#attributes)
+  5. [Testing](#testing)
+6. [Structuring Data and Matching Patterns](#structuring-data-and-matching-patterns)
+  1. [Strings](#strings)
+  2. [Array, Vector, and Slices](#array-vector-and-slices)
+7. [Structs](#structs)
+8. [Enum](#enum)
+9. [Input from the Console](#getting-input-from-the-console)
+10. [Matching Patterns](#matching-patterns)
+
 ## Starting with Rust
 
 I've gone for Rust installed via Rustup. It's Rust-lang's version manager. It allows me to have stable and nightly installed and instantly switchable. Added to this is the possibility of using specific versions for specific builds. Great tool for development.
@@ -230,7 +261,7 @@ If calling a tuple and wishing to skip an item from within it you can match the 
 
 Tuples can only be compared or assigned to each other when the same type. You would create a new tuple with a collection of the others is you needed to work with different types.
 
- 
+
 
 ### Structs
 
