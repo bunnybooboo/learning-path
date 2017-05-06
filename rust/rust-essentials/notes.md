@@ -300,7 +300,7 @@ let first = Rainbow("Fabuloso", 88);
 
 Both [result](https://doc.rust-lang.org/std/result/) and [option](https://doc.rust-lang.org/std/option/index.html) are enums and also defined within the standard library.
 
-Result is the ouput you get from the code: when everything runs successfully, or if there is an error. Option is the output when you might have a result, or when you might optionally have none at all.
+Result is the ouput you get from the code when everything runs successfully, or if there is an error. Option is the output when you might have a result, or when you might optionally have none at all.
 
 ### Getting Input from the Console
 
