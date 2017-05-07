@@ -52,7 +52,7 @@ Rust is not a new language. It's innovative but not reinventing the wheel. It's 
 
 ### Package and Dependency Manager - Cargo
 
-Rust uses a package and dependency manager called [Cargo](http://doc.crates.io/). This in my brain at least is starting to building something more along the lines of [Ruby Gems](https://rubygems.org/) and [NPM](https://www.npmjs.com/). I've done a rather brief tutorial on [Ruby on Rails](http://rubyonrails.org/) so excuse my ignorance if I've technically got that incorrect. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
+Extending further from rustc, Rust uses a package and dependency manager called [Cargo](http://doc.crates.io/). This in my brain at least is starting to building something more along the lines of [Ruby Gems](https://rubygems.org/) and [NPM](https://www.npmjs.com/). I've done a rather brief tutorial on [Ruby on Rails](http://rubyonrails.org/) so excuse my ignorance if I've technically got that incorrect. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
 
 ## Using Variables and Types
 
