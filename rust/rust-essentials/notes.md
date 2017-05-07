@@ -305,5 +305,17 @@ Result is the ouput you get from the code when everything runs successfully, or 
 ### Getting Input from the Console
 
 Rust, as you might expect, has the ability to read input from the user. This is achieved through the use of the `stdin()` function from the `io` module in the `std` crate: 
+```
+use std::io;
 
+fn main() {
+  println!("What colour short are you wearing?");
+  let mut shirt = String::new();
+  io::stdin().read_line(&mut shirt)
+    .ok()
+    .expect("Failed to read line");
+  let colour = shirt.trim();
+  println!("Really nice {} shirt!", shirt);
+}
+```
 ### Matching Patterns
