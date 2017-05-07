@@ -468,4 +468,6 @@ The left hand side of the match option can be an expression. In one example they
 
 ### Calling Rust from other languages
   
-**This document is a work in progress. Check back over time to see the content grow.**
+---
+
+**\*This document is a work in progress. Check back over time to see the content grow.*\**
