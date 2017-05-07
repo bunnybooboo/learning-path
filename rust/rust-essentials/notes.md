@@ -310,10 +310,13 @@ use std::io;
 
 fn main() {
   println!("What colour short are you wearing?");
+  // prints the question
   let mut shirt = String::new();
+  // this next command shows all parts chained ending in the semicolon
   io::stdin().read_line(&mut shirt)
-    .ok()
-    .expect("Failed to read line");
+  //read_line() returns a Result value ok or err
+    .ok() // converts Result in option value
+    .expect("Failed to read line"); // else returns this value
   let colour = shirt.trim();
   println!("Really nice {} shirt!", colour);
 }
