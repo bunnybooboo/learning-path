@@ -470,4 +470,4 @@ The left hand side of the match option can be an expression. In one example they
   
 ---
 
-**\*This document is a work in progress. Check back over time to see the content grow.*\**
+**This document is a work in progress. Check back over time to see the content grow.**
