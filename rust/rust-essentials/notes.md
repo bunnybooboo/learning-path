@@ -317,7 +317,7 @@ fn main() {
   //read_line() returns a Result value ok or err
     .ok() // converts Result into option value
     .expect("Failed to read line"); // else returns this value
-  let colour = shirt.trim();
+  let colour = shirt.trim(); // removes the newline character from input
   println!("Really nice {} shirt!", colour);
 }
 ```
