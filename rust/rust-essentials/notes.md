@@ -1,6 +1,8 @@
 **Personal notes from the Packt book 'Rust Essentials'**
 ===================================================
 
+## Table of Contents
+
 1. [Starting with Rust](#starting-with-rust)
 2. [Cargo](#packaga-and-dependency-manager-cargo)
 3. [Using Variables and Types](#using-variables-and-types)  
