@@ -44,6 +44,32 @@
     * [Traits](#traits)
     * [Using trait constraints](#using-trait-constraints)
     * [Built in traits and operator overloading](#built-traits-and-operator-loading)
+6. [Pointers and Memory Safety](#pointers-and-memory-safety)
+    * [Pointers and references](#pointers-and-references)
+    * [Ownership and borrowing](#ownership-and-borrowing)
+    * [Boxes](#boxes)
+    * [Reference Counting](#reference-counting)
+7. [Organizing Code and Macros](#organizing-code-and-macros)
+    * [Building crates](#building-crates)
+    * [Defining a module](#defining-a-module)
+    * [Visability of items](#visability-of-items)
+    * [Importing modules and file hierachy](#importing-modules-and-file-hierachy)
+    * [Importing external crates](#importing-external-crates)
+    * [Exporting a public interface](#exporting-a-public-interface)
+    * [Adding external crates to a project](#adding-external-crates-to-a-project)
+    * [The test module](#the-test-module)
+8. [Concurrency and Parallelism](#concurrency-and-parellelism)
+    * [Concurrency and threads](#concurrency-and-threads)
+    * [Shared mutable state](#shared-mutable-state)
+    * [Communication through channels](#communication-through-channels)
+    * [Synchronous and Asynchronous communications](#synchronous-and-asynchronous-communications)
+9. [Programming at the Boundaries](#programming-at-the-boundaries)
+    * [Program arguments](#program-arguments)
+    * [Unsafe code](#unsafe-code)
+    * [Raw pointers](#raw-pointers)
+    * [Interfacing with C](#interfacing-with-c)
+    * [Inlining assembly code](#inlining-assembly-code)
+    * [Calling Rust from other languages](#calling-rust-from-other-languages)
 
 ## Starting with Rust
 
@@ -65,7 +91,7 @@ Rust is not a new language. It's innovative but not reinventing the wheel. It's 
 ### Package and Dependency Manager - Cargo
 
 Extending further from rustc, Rust uses a package and dependency manager called [Cargo](http://doc.crates.io/). This in my brain at least is starting to building something more along the lines of [Ruby Gems](https://rubygems.org/) and [NPM](https://www.npmjs.com/). I've done a rather brief tutorial on [Ruby on Rails](http://rubyonrails.org/) so excuse my ignorance if I've technically got that incorrect. Please feel free to correct me in any of my writings! Cargo is evoked using `cargo new` >> `cargo build` >> `cargo run`. It even has your back by creating a binary file by adding `--bin` to the 'new' process. i.e. you would evoke using `cargo new your_unicorn_project --bin`
-
+---
 ## Using Variables and Types
 
 ### Comments
@@ -171,7 +197,7 @@ I think of this via a lesson I saw on a computer science MOOC (CS50?), where the
 You can print the precise location of a stack using `{:p}`.
 
 You could say that the stack is very much affected by the use of variables. Well more that the stack can not be altered. Only by calling a mutable variable as a mutable variable `&mut` can you reuse a mutable variable under a newly created variable name. Attempting to do this with a default variable would throw an error. You must expressly call it as mutable in the variable binding and in its calling.
-
+---
 ## Using Function and Control Structures
 
 ### Branching on a Condition
@@ -213,7 +239,7 @@ If you use the attribute `#[test]` the code will run only when a test is invoked
 A test will always pass unless you also add the `assert_eq!([actual], [expected]);` macro, which forces a panic unless the result is exact as the enclosed assertion.
 
 In cargo you can create an executable project which is known as a 'crate'. This is done with `mylib`, i.e. `cargo new mylib`. This will add `src` directory with a `lib.rs` file which holds a test template. You can edit this file then run your tests in parallel using `cargo test`.
-
+---
 ## Structuring Data and Matching Patterns
 
 ### Strings
@@ -353,7 +379,7 @@ It could instead be written as a `let` variable, assigning the returned result. 
 Match needs to run through every option available. If you needed to have a field for every other option you have somtheing like `_  =>  println!("No results");`, using the underscore as catchall.
 
 The left hand side of the match option can be an expression. In one example they discuss using a range, `num @ 76...90 => println!("It's in your range!");`. Note that `for in` would use two dot notation in the range, whereas match uses three dot notation.
-
+---
 ## Higher-order Functions and Parametrization
 
 ### Higher-order functions and closures
@@ -374,4 +400,56 @@ The left hand side of the match option can be an expression. In one example they
 
 ### Built in traits and operator overloading
 ---
+## Pointers and Memory Safety
+
+### Pointers and references
+
+### Ownership and borrowing
+
+### Boxes
+
+### Reference Counting
+---
+## Organizing Code and Macros
+
+### Building crates
+
+### Defining a module
+
+### Visability of items
+
+### Importing modules and file hierachy
+
+### Importing external crates
+
+### Exporting a public interface
+
+### Adding external crates to a project
+
+### The test module
+---
+## Concurrency and Parallelism
+
+### Concurrency and threads
+
+### Shared mutable state
+
+### Communication through channels
+
+### Synchronous and Asynchronous communications
+---
+## Programming at the Boundaries
+
+### Program arguments
+
+### Unsafe code
+
+### Raw pointers
+
+### Interfacing with C
+
+### Inlining assembly code
+
+### Calling Rust from other languages
+  
 **This document is a work in progress. Check back over time to see the content grow.**
