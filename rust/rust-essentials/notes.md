@@ -332,7 +332,8 @@ fn main() {
 ```
 ### Matching Patterns
 
-When working mutable data, especially with user input, it's a good move to check these data against expected parameter checks. This is where the rather cool [match](https://doc.rust-lang.org/book/match.html) comes in to replace if/else statements seen in other languages.
+When working mutable data, especially with user input, it's a good move to check these data against expected parameter checks. This is where the rather cool [match](https://doc.rust-lang.org/book/match.html) comes in to replace if/else statements seen in other languages. A lot like switch in Javascript ES6.
+
 
 ---
 **This document is a work in progress. Check back over time to see the content grow.**
