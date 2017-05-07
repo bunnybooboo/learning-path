@@ -315,7 +315,7 @@ fn main() {
     .ok()
     .expect("Failed to read line");
   let colour = shirt.trim();
-  println!("Really nice {} shirt!", shirt);
+  println!("Really nice {} shirt!", colour);
 }
 ```
 ### Matching Patterns
