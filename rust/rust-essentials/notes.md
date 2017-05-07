@@ -199,7 +199,9 @@ I think of this via a lesson I saw on a computer science MOOC (CS50?), where the
 You can print the precise location of a stack using `{:p}`.
 
 You could say that the stack is very much affected by the use of variables. Well more that the stack can not be altered. Only by calling a mutable variable as a mutable variable `&mut` can you reuse a mutable variable under a newly created variable name. Attempting to do this with a default variable would throw an error. You must expressly call it as mutable in the variable binding and in its calling.
+
 ---
+
 ## Using Function and Control Structures
 
 ### Branching on a Condition
@@ -241,7 +243,9 @@ If you use the attribute `#[test]` the code will run only when a test is invoked
 A test will always pass unless you also add the `assert_eq!([actual], [expected]);` macro, which forces a panic unless the result is exact as the enclosed assertion.
 
 In cargo you can create an executable project which is known as a 'crate'. This is done with `mylib`, i.e. `cargo new mylib`. This will add `src` directory with a `lib.rs` file which holds a test template. You can edit this file then run your tests in parallel using `cargo test`.
+
 ---
+
 ## Structuring Data and Matching Patterns
 
 ### Strings
@@ -381,7 +385,9 @@ It could instead be written as a `let` variable, assigning the returned result. 
 Match needs to run through every option available. If you needed to have a field for every other option you have somtheing like `_  =>  println!("No results");`, using the underscore as catchall.
 
 The left hand side of the match option can be an expression. In one example they discuss using a range, `num @ 76...90 => println!("It's in your range!");`. Note that `for in` would use two dot notation in the range, whereas match uses three dot notation.
+
 ---
+
 ## Higher-order Functions and Parametrization
 
 ### Higher-order functions and closures
@@ -401,7 +407,9 @@ The left hand side of the match option can be an expression. In one example they
 ### Using trait constraints
 
 ### Built in traits and operator overloading
+
 ---
+
 ## Pointers and Memory Safety
 
 ### Pointers and references
@@ -411,7 +419,9 @@ The left hand side of the match option can be an expression. In one example they
 ### Boxes
 
 ### Reference Counting
+
 ---
+
 ## Organizing Code and Macros
 
 ### Building crates
@@ -429,7 +439,9 @@ The left hand side of the match option can be an expression. In one example they
 ### Adding external crates to a project
 
 ### The test module
+
 ---
+
 ## Concurrency and Parallelism
 
 ### Concurrency and threads
@@ -439,7 +451,9 @@ The left hand side of the match option can be an expression. In one example they
 ### Communication through channels
 
 ### Synchronous and Asynchronous communications
+
 ---
+
 ## Programming at the Boundaries
 
 ### Program arguments
