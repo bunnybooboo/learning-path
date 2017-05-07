@@ -41,6 +41,13 @@ As I'm using [Arch Linux](https://www.archlinux.org/) the terminal command to in
 
 Rust uses a similar compilation method to C ([Clang](https://en.wikipedia.org/wiki/Clang)) where you would `make` >> `install` >> execute. The one for Rust is called rustc, where you write >> compile >> execute.
 
+For example:
+
+```
+rustc hello_world.rs
+./hello_world
+```
+
 Rust is not a new language. It's innovative but not reinventing the wheel. It's taking may of the good parts of other languages and upping the game.
 
 ### Package and Dependency Manager - Cargo
