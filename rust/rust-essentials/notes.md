@@ -29,11 +29,21 @@
 6. [Structuring Data and Matching Patterns](#structuring-data-and-matching-patterns)
     * [Strings](#strings)
     * [Array, Vector, and Slices](#array-vector-and-slices)
-7. [Structs](#structs)
-8. [Enum](#enum)
-9. [Result and Option](#result-and-option)
-10. [Input from the Console](#getting-input-from-the-console)
-11. [Matching Patterns](#matching-patterns)
+    * [Structs](#structs)
+    * [Enum](#enum)
+    * [Result and Option](#result-and-option)
+    * [Input from the Console](#getting-input-from-the-console)
+    * [Matching Patterns](#matching-patterns)
+7. [Higher-order Functions and Parametrization](#higher-order-functions-and-parametrization)
+    * [Higher-order functions and closures](#higher-order-functions-and-closures)
+    * [Iterators](#iterators)
+    * [Consumers and Adapters](#consumers-and-adapters)
+    * [Generic data structures and functions](#generic-data-structures-and-functions)
+    * [Error handling](#error-handling)
+    * [Methods on structs](#methods-on-structs)
+    * [Traits](#traits)
+    * [Using trait constraints](#using-trait-constraints)
+    * [Built in traits and operator overloading](#built-traits-and-operator-loading)
 
 ## Starting with Rust
 
@@ -332,8 +342,36 @@ fn main() {
 ```
 ### Matching Patterns
 
-When working mutable data, especially with user input, it's a good move to check these data against expected parameter checks. This is where the rather cool [match](https://doc.rust-lang.org/book/match.html) comes in to replace if/else statements seen in other languages. A lot like switch in Javascript ES6.
+When working mutable data, especially with user input, it's a good move to check these data against expected parameter checks. This is where the rather cool expression [match](https://doc.rust-lang.org/book/match.html) comes in to replace if/else statements seen in other languages. A lot like switch in Javascript ES6.
 
+In the Pact book I'm reading they use an example where they show the use of error handling; via [unwrap](https://doc.rust-lang.org/book/error-handling.html#unwrapping-explained), which shows the result, calling a panic and stopping to program if there is an error. Now this is not usually very helpful, so more effort is then put into explaining matching. Though there may be some use cases where unwrap might be useful which are explained in the Rust link I just shared.
 
+So, the Pact example used `match` run against some user input in the previous section. This returned Ok or Error, and in their example the match code `Ok(num) => println!("{}", num)` and so on. Note that the => is only executed once the first part of the match does, passing down to the next branch if not. Each branch is separated by a comma. There is no need to use a break as you would in C/C++.
+
+It could instead be written as a `let` variable, assigning the returned result. Or even as an `if let` variable (to the OK() ) and `else` for the alternative result. And even as a `while let`. But these then lose the magic of the match expression, though it could prove snappier code in some cases. 
+
+Match needs to run through every option available. If you needed to have a field for every other option you have somtheing like `_  =>  println!("No results");`, using the underscore as catchall.
+
+The left hand side of the match option can be an expression. In one example they discuss using a range, `num @ 76...90 => println!("It's in your range!");`. Note that `for in` would use two dot notation in the range, whereas match uses three dot notation.
+
+## Higher-order Functions and Parametrization
+
+### Higher-order functions and closures
+
+### Iterators
+
+### Consumers and Adapters
+
+### Generic data structures and functions
+
+### Error handling
+
+### Methods on structs
+
+### Traits
+
+### Using trait constraints
+
+### Built in traits and operator overloading
 ---
 **This document is a work in progress. Check back over time to see the content grow.**
