@@ -315,7 +315,7 @@ fn main() {
   // this next command shows all parts chained ending in the semicolon
   io::stdin().read_line(&mut shirt)
   //read_line() returns a Result value ok or err
-    .ok() // converts Result in option value
+    .ok() // converts Result into option value
     .expect("Failed to read line"); // else returns this value
   let colour = shirt.trim();
   println!("Really nice {} shirt!", colour);
