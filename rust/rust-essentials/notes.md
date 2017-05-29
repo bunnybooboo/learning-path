@@ -400,7 +400,11 @@ A closure is an anonymous function which closes its variables availability to it
 
 ### Iterators
 
+An iterator is an object which returns sequential items. next() is used to return the next item. A `for` loop contains an iterator at its core. An iterator will only specifically call a value when asked.  
+
 ### Consumers and Adapters
+
+A consumer, in their example turns a range into a vector using collect(). They then talk about the find() consumer which matches the very first condition match. A filter(), take(), fold(), and map() are their examples of adapters, and can be chained along with a collector using dot notion.
 
 ### Generic data structures and functions
 
