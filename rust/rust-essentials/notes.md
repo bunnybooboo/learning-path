@@ -4,7 +4,7 @@
 ## Table of Contents
 
 1. [Starting with Rust](#starting-with-rust)
-    * [Cargo](#packaga-and-dependency-manager-cargo)
+    * [Cargo](#package-and-dependency-manager-cargo)
 2. [Using Variables and Types](#using-variables-and-types)  
     * [Comments](#comments)
     * [Simple Constants](#simple-constants)
@@ -390,7 +390,11 @@ The left hand side of the match option can be an expression. In one example they
 
 ## Higher-order Functions and Parametrization
 
+Functional programming and object-orientation.
+
 ### Higher-order functions and closures
+
+
 
 ### Iterators
 
