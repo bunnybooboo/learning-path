@@ -319,7 +319,7 @@ Tuples can only be compared or assigned to each other when the same type. You wo
 
 ### Enum
 
-[Enum](https://doc.rust-lang.org/book/enums.html) is for when there is a limited number of values. For example, 
+[Enum](https://doc.rust-lang.org/book/enums.html) is for when there is a limited number of values. For example,
 ```
 enum Directions{
   Left, Right, Forward, Back, Up, Down
@@ -355,7 +355,7 @@ Result is the ouput you get from the code when everything runs successfully, or 
 
 ### Getting Input from the Console
 
-Rust, as you might expect, has the ability to read input from the user. This is achieved through the use of the `stdin()` function from the `io` module in the `std` crate: 
+Rust, as you might expect, has the ability to read input from the user. This is achieved through the use of the `stdin()` function from the `io` module in the `std` crate:
 ```
 use std::io;
 
@@ -380,7 +380,7 @@ In the Pact book I'm reading they use an example where they show the use of erro
 
 So, the Pact example used `match` run against some user input in the previous section. This returned Ok or Error, and in their example the match code `Ok(num) => println!("{}", num)` and so on. Note that the => is only executed once the first part of the match does, passing down to the next branch if not. Each branch is separated by a comma. There is no need to use a break as you would in C/C++.
 
-It could instead be written as a `let` variable, assigning the returned result. Or even as an `if let` variable (to the OK() ) and `else` for the alternative result. And even as a `while let`. But these then lose the magic of the match expression, though it could prove snappier code in some cases. 
+It could instead be written as a `let` variable, assigning the returned result. Or even as an `if let` variable (to the OK() ) and `else` for the alternative result. And even as a `while let`. But these then lose the magic of the match expression, though it could prove snappier code in some cases.
 
 Match needs to run through every option available. If you needed to have a field for every other option you have somtheing like `_  =>  println!("No results");`, using the underscore as catchall.
 
@@ -394,7 +394,9 @@ Functional programming and object-orientation.
 
 ### Higher-order functions and closures
 
+A [higher-order function](https://en.wikipedia.org/wiki/Higher-order_function) (HOF) is a function which takes one or more functions as its parameters and/or outputs a more useful function. HOF's adhere to the don't repeat yourself (DRY) principles.
 
+A closure is an anonymous function which closes its variables availability to its surrounding scope. A closure only requires a reference to its variable, whereas a moving closure takes ownership of those variables instead. Moving closures are seen in concurrency and parellelism.
 
 ### Iterators
 
@@ -471,7 +473,7 @@ Functional programming and object-orientation.
 ### Inlining assembly code
 
 ### Calling Rust from other languages
-  
+
 ---
 
 **This document is a work in progress. Check back over time to see the content grow.**
