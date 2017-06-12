@@ -408,9 +408,15 @@ A consumer, in their example turns a range into a vector using collect(). They t
 
 ### Generic data structures and functions
 
+Generic data structures alow you to write code and use the same code for a variety of data types. Not much to add to this. Covers results and options, Ok() and Err(), etc.
+
 ### Error handling
 
+Panics: when dividing by zero, when an assert fails, portion of code is unreachable. Failures: use the previously mention Result and Option.
+
 ### Methods on structs
+
+
 
 ### Traits
 
