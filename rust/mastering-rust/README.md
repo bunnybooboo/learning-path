@@ -2,4 +2,4 @@ Initialising Packt Publishing repo to track notes on reading [Mastering Rust](ht
 
 This expands on another book of theirs I've been working through: 'Rust Essentials'. Notes from that book can be found at [Rust Essentials Notes](/rust/rust-essentials/notes.md)
 
-[![Build_Status](https://travis-ci.org/bunnybooboo/mastering-rust.svg?branch=master)](https://travis-ci.org/bunnybooboo/mastering-rust)
+[![Build_Status](https://travis-ci.org/bunnybooboo/learning-path/rust/mastering-rust.svg?branch=master)](https://travis-ci.org/bunnybooboo/learning-path/rust/mastering-rust)
