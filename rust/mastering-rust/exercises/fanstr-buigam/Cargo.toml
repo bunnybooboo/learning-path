@@ -1,0 +1,7 @@
+[package]
+name = "fanstr-buigam"
+version = "0.1.0"
+authors = ["bunnybooboo <sw1ayfe@gmail.com>"]
+description = "Test cargo project"
+
+[dependencies]

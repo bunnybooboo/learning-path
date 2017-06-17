@@ -1,0 +1,1 @@
+/home/david/Documents/learning-path/rust/mastering-rust/code/library-example/target/debug/library_example-13993679e1b7f85a: /home/david/Documents/learning-path/rust/mastering-rust/code/library-example/src/lib.rs

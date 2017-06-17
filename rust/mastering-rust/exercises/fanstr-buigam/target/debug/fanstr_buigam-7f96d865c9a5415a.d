@@ -1,0 +1,1 @@
+/home/david/Documents/learning-path/rust/mastering-rust/exercises/fanstr-buigam/target/debug/fanstr_buigam-7f96d865c9a5415a: /home/david/Documents/learning-path/rust/mastering-rust/exercises/fanstr-buigam/src/lib.rs

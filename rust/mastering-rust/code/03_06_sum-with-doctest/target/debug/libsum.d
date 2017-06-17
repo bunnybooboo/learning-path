@@ -1,0 +1,1 @@
+/home/david/Documents/learning-path/rust/mastering-rust/code/03_06_sum-with-doctest/target/debug/libsum.rlib: /home/david/Documents/learning-path/rust/mastering-rust/code/03_06_sum-with-doctest/src/lib.rs
