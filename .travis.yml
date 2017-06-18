@@ -4,11 +4,11 @@ rust:
         #- beta
      - nightly
 matrix:
-        env:
-                - TEST_DIR=rust/mastering-rust/*
-                - TEST: true
-                - PROD: false
+        #env:
+        #       - TEST_DIR=rust/mastering-rust/*
+        #        - TEST: true
+        #        - PROD: false
         
         allow_failures:
                 - rust: nightly
-        script: cd $TEST_DIR 
+        script: cd $TEST_DIR && cargo test
