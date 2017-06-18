@@ -1,9 +1,11 @@
 language: rust
 rust:
-- nightly
+     - stable
+     - beta
+     - nightly
 matrix:
         env:
                 - TEST_DIR=rust/mastering-rust/03_07_bench-test
         allow_failures:
                 - rust: nightly
-        script: cd $TEST_DIR && rustup run cargo nightly bench
+        script: cd $TEST_DIR && cargo test
