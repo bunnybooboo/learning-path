@@ -5,7 +5,10 @@ rust:
      - nightly
 matrix:
         env:
-                - TEST_DIR=rust/mastering-rust/03_07_bench-test
+                - TEST_DIR=./rust/mastering-rust/
+                - TEST: true
+                - PROD: false
+        
         allow_failures:
                 - rust: nightly
         script: cd $TEST_DIR && cargo test
