@@ -6,4 +6,4 @@ rust:
 matrix:
 allow_failures:
 - rust: nightly
-script: cd rust/mastering-rust/ && rustup run nightly cargo bench
+script: cd rust/mastering-rust/code/03_07_bench-test && rustup run nightly cargo bench
