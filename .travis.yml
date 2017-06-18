@@ -2,6 +2,7 @@ language: rust
 rust:
 - nightly
 matrix:
-allow_failures:
-- rust: nightly
-script: cd rust/mastering-rust/code/03_07_bench-test && rustup run nightly cargo bench
+        env:
+                - TEST_DIR=rust/mastering-rust/03_07_bench-test
+        allow_failures:
+                - rust: nightly
