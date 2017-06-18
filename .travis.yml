@@ -9,6 +9,7 @@ rust:
         
 allow_failures:
     - rust: nightly
+before_script:
+    - cd rust/mastering-rust/code/
 script:
-    - cd /rust/mastering-rust/code/
     - cargo test --verbose --all
