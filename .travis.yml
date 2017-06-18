@@ -5,7 +5,7 @@ rust:
      - nightly
 matrix:
         #env:
-        #       - TEST_DIR=rust/mastering-rust/*
+              - TEST_DIR=rust/mastering-rust/code/03_07_bench-test/
         
         allow_failures:
                 - rust: nightly
