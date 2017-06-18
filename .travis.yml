@@ -6,9 +6,9 @@ rust:
 matrix:
         #env:
         #       - TEST_DIR=rust/mastering-rust/*
-        #        - TEST: true
-        #        - PROD: false
         
         allow_failures:
                 - rust: nightly
-        script: cd $TEST_DIR && cargo test
+        script:
+                - cd $TEST_DIR
+                - cargo test
