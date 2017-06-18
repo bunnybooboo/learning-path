@@ -1,7 +1,7 @@
 language: rust
 rust:
-     - stable
-     - beta
+        #- stable
+        #- beta
      - nightly
 matrix:
         env:
@@ -11,4 +11,4 @@ matrix:
         
         allow_failures:
                 - rust: nightly
-        script: cd $TEST_DIR && cargo test
+        script: cd $TEST_DIR 
