@@ -1,14 +1,14 @@
 language: rust
 rust:
-        #- stable
-        #- beta
-     - nightly
+    - stable
+    - beta
+    - nightly
 matrix:
-        #env:
-              - TEST_DIR=rust/mastering-rust/code/03_07_bench-test/
+    env:
+        - TEST_DIR=/rust/mastering-rust/code/
         
         allow_failures:
-                - rust: nightly
+            - rust: nightly
         script:
-                - cd $TEST_DIR
-                - cargo test
+            - cd $TEST_DIR
+            - cargo test --verbose --all
