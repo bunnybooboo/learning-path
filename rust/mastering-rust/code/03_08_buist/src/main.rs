@@ -30,7 +30,7 @@ struct Grid {
     size: (usize, usize),
     squares: Vec<Square>
 }
-/*
+
 impl Grid {
     fn generate_empty(size_x: usize, size_y: usize) -> Grid {
         let number_of_squares = size_x * size_y;
@@ -44,23 +44,6 @@ impl Grid {
             size: (size_x, size_y),
             squares: squares
         }
-    }
-}
- */
-
-impl Grid {
-    fn generate_empty(size_x: usize, size_y: usize) -> Grid {
-        let number_of_squares = size_x * size_y;
-        let mut squares: Vec<Square> = Vec::with_capacity(number_of_squares);
-
-        for _ in 1..number_of_squares {
-            squares.push(Square{ground: TerrainGround::Stone, block: None, beings: None});
-        }
-
-        Grid {
-            size: (size_x, size_y),
-            squares: squares
-        };
     }
 }
 #[cfg(test)]
