@@ -22,7 +22,9 @@
       <!-- Link we will build. -->
       <a-entity class="link"
       geometry="primitive: plane; height: 1; width: 1"
-      material="shader: flat; src: #cubes-thumb"></a-entity>
+      material="shader: flat; src: #cubes-thumb"
+      sound="on: click; src: #click-sound"
+      position="0 1 -3"></a-entity>
       <!-- Camera + Cursor. -->
       <a-camera>
         <a-cursor id="cursor">

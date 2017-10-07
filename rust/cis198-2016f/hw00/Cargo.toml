@@ -1,0 +1,6 @@
+[package]
+name = "hw00"
+version = "0.1.0"
+authors = ["bunnybooboo <sw1ayfe@gmail.com>"]
+
+[dependencies]
