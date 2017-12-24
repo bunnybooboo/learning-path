@@ -1,0 +1,1 @@
+/home/david/Documents/learning-path/rust/YT_Rust_Programming/05-learn_dependencies/target/debug/05-learn_dependencies: /home/david/Documents/learning-path/rust/YT_Rust_Programming/05-learn_dependencies/src/main.rs
