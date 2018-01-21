@@ -7,3 +7,6 @@
 [submodule "rust/programming_rust"]
 	path = rust/programming_rust
 	url = https://github.com/ProgrammingRust/examples.git
+[submodule "udacity_ud864_google_maps.git"]
+	path = udacity_ud864_google_maps.git
+	url = https://github.com/udacity/ud864.git
