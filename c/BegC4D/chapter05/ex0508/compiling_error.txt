@@ -1,0 +1,29 @@
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c: In function ‘main’:
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:10: error: stray ‘\342’ in program
+   printf(“The total is %d\n”,16+17);
+          ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:11: error: stray ‘\200’ in program
+   printf(“The total is %d\n”,16+17);
+           ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:12: error: stray ‘\234’ in program
+   printf(“The total is %d\n”,16+17);
+            ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:13: error: ‘The’ undeclared (first use in this function)
+   printf(“The total is %d\n”,16+17);
+             ^~~
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:13: note: each undeclared identifier is reported only once for each function it appears in
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:17: error: expected ‘)’ before ‘total’
+   printf(“The total is %d\n”,16+17);
+                 ^~~~~
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:28: error: stray ‘\’ in program
+   printf(“The total is %d\n”,16+17);
+                            ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:30: error: stray ‘\342’ in program
+   printf(“The total is %d\n”,16+17);
+                              ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:31: error: stray ‘\200’ in program
+   printf(“The total is %d\n”,16+17);
+                               ^
+/home/david/Documents/learning-path/c/BegC4D/ex0508/main.c:4:32: error: stray ‘\235’ in program
+   printf(“The total is %d\n”,16+17);
+                                ^

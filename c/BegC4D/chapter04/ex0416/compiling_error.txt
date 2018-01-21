@@ -1,0 +1,8 @@
+/home/david/Documents/learning-path/c/BegC4D/ex0416/main.c: In function ‘main’:
+/home/david/Documents/learning-path/c/BegC4D/ex0416/main.c:4:3: warning: implicit declaration of function ‘writeln’; did you mean ‘fwrite’? [-Wimplicit-function-declaration]
+   writeln("Another horrible mistake.");
+   ^~~~~~~
+   fwrite
+/tmp/ccnhoBnl.o: In function `main':
+main.c:(.text+0x11): undefined reference to `writeln'
+collect2: error: ld returned 1 exit status

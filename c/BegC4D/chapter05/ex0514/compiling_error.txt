@@ -1,0 +1,6 @@
+/home/david/Documents/learning-path/c/BegC4D/ex0514/main.c: In function ‘main’:
+/home/david/Documents/learning-path/c/BegC4D/ex0514/main.c:8:36: error: ‘VALUE2’ undeclared (first use in this function); did you mean ‘VALUE1’?
+   printf("Addition is %d\n",VALUE1+VALUE2);
+                                    ^~~~~~
+                                    VALUE1
+/home/david/Documents/learning-path/c/BegC4D/ex0514/main.c:8:36: note: each undeclared identifier is reported only once for each function it appears in

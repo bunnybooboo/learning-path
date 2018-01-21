@@ -1,0 +1,3 @@
+[submodule "c/BegC4D/chapter06/ex0612/c/head-first-c"]
+	path = c/BegC4D/chapter06/ex0612/c/head-first-c
+	url = https://github.com/dogriffiths/HeadFirstC.git

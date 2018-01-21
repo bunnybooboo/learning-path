@@ -1,0 +1,13 @@
+/home/david/Documents/learning-path/c/BegC4D/ex0408/main.c: In function ‘main’:
+/home/david/Documents/learning-path/c/BegC4D/ex0408/main.c:4:8: warning: missing terminating " character
+   puts("This program goes BOOM!)
+        ^
+/home/david/Documents/learning-path/c/BegC4D/ex0408/main.c:4:8: error: missing terminating " character
+   puts("This program goes BOOM!)
+        ^~~~~~~~~~~~~~~~~~~~~~~~~
+/home/david/Documents/learning-path/c/BegC4D/ex0408/main.c:5:3: error: expected expression before ‘return’
+   return(0);
+   ^~~~~~
+/home/david/Documents/learning-path/c/BegC4D/ex0408/main.c:6:1: error: expected ‘;’ before ‘}’ token
+ }
+ ^

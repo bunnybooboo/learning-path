@@ -1,0 +1,4 @@
+/home/david/Documents/learning-path/c/BegC4D/ex0409/main.c: In function ‘main’:
+/home/david/Documents/learning-path/c/BegC4D/ex0409/main.c:5:3: error: expected ‘;’ before ‘return’
+   return(0);
+   ^~~~~~
