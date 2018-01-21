@@ -1,3 +1,9 @@
 [submodule "c/BegC4D/chapter06/ex0612/c/head-first-c"]
 	path = c/BegC4D/chapter06/ex0612/c/head-first-c
 	url = https://github.com/dogriffiths/HeadFirstC.git
+[submodule "free-programming-books"]
+	path = free-programming-books
+	url = https://github.com/EbookFoundation/free-programming-books.git
+[submodule "rust/programming_rust"]
+	path = rust/programming_rust
+	url = https://github.com/ProgrammingRust/examples.git
