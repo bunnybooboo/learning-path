@@ -13,3 +13,6 @@
 [submodule "rust/rustlang-book"]
 	path = rust/rustlang-book
 	url = https://github.com/rust-lang/book.git
+[submodule "c/headfirst-c"]
+	path = c/headfirst-c
+	url = https://github.com/dogriffiths/HeadFirstC.git
