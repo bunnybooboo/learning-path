@@ -10,3 +10,6 @@
 [submodule "udacity_ud864_google_maps.git"]
 	path = udacity_ud864_google_maps.git
 	url = https://github.com/udacity/ud864.git
+[submodule "rust/rustlang-book"]
+	path = rust/rustlang-book
+	url = https://github.com/rust-lang/book.git
