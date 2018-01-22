@@ -16,3 +16,6 @@
 [submodule "c/headfirst-c"]
 	path = c/headfirst-c
 	url = https://github.com/dogriffiths/HeadFirstC.git
+[submodule "building-tools-with-github"]
+	path = building-tools-with-github
+	url = https://github.com/xrd/building-tools-with-github
