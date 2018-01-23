@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<!-- Code for working version of code from page 18
+	Building Tools with Github book -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			function myCallback( payload ) {
+				if( payload.status = "200 OK") {
+					document.getElementById("success").innerHTML = payload.data.current_user_url;
+				} else {
+					document.createElement("error").innerHTML = "An error occurred";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<p>Testing out JSON-P</p>
+		<p>via Building Tools with Github book.</p>
+		<div id="success">Placeholder for success</div>
+		<div id="error">Placeholder for error</div>
+		<script src="https://api.github.com/?callback=myCallback" type="text/javascript"></script>
+	</body>
+<html>
