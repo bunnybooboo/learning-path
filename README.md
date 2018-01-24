@@ -30,7 +30,11 @@ Technologies explored:
     - self hosted OpenCart
     - self hosted phpBB
     - AWS
-  - Additional learnings
+    - OSM: OpenStreetMap
+      - ID
+      - JOSM
+  - Current additional learnings
     - Project Management: Prince2 4 wk intro course in 2017
     - Agile: learning toward PMI-ACP
     - SOAs
+    - qGIS
