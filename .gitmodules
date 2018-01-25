@@ -22,3 +22,6 @@
 [submodule "sandbox/building-tools-with-github/test-wiki"]
 	path = sandbox/building-tools-with-github/test-wiki
 	url = https://github.com/bunnybooboo/learning-path.wiki.git
+[submodule "github-api-platform-samples"]
+	path = github-api-platform-samples
+	url = git@github.com:bunnybooboo/platform-samples.git

@@ -1,0 +1,12 @@
+[package]
+name = "images"
+version = "0.1.0"
+authors = ["bunnybooboo <sw1ayfe@gmail.com>"]
+
+[dependencies]
+github-rs = "0.6"
+serde_json = "1.0"
+rocket = "0.3.6"
+oauth2 = "1.1.2"
+zip = "0.3.0"
+tempfile = "2.2.0"

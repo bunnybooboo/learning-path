@@ -1,0 +1,31 @@
+What
+Testing Github REST API - though this will soon switch to GraphQL
+
+How
+This pulls the API, with parameters in URL, then sends to JQ to filter through the JSON
+
+Code
+curl -u username:api_key 'https://api.github.com/repos/MozillaFoundation/mozfest-program-2017/issues?assignee=bunnybooboo&assignee=brettgaylor' | jq '.[] | {title: .title}'
+
+Information
+Uses JQ and the manual is here https://stedolan.github.io/jq/manual/
+its tutorial that I tested https://stedolan.github.io/jq/tutorial/
+
+Uses Github API and its docs are here REST API https://developer.github.com/v3 and newer GraphQL API https://developer.github.com/v4/
+GH API calls are throttled to 60 without signing in and 500 when signed in
+to see the limit rates add -i to curl - but be sure to remove it before call JQ
+
+I was thrown for hours by the OAuth personal token not having the right privileges for all tutorial parts. Also same for page 18 fetches via the API and injects into Web page: I was stuck when the example expected "status:200" when the API actually returned "status:200 OK".
+
+In the Gollum tutorial it all seemingly works, apart from rugged needs to be latest version AND the merge doesn't work. Looks like I need to git fetch and rebase origin/master and possibly a --hard-reset. BUT instead I pulled from the wiki first then copied in source files to fix this issue.
+
+The Gollum code also listed Zip incorrectly should be `Zip::File.open...` instead of `Zip::Zip.open..`. The more recent version switched it to `Zip:ZipFile.open...`
+
+After not getting it work I pulled the updated source files from his repo. Still an error about implicit string on line 24. By appending to `@repo.head.target.to_s` fixes this error and now saves the file as expected.
+
+
+Looking at the .NET implementation, to build the same in Rust you would need:
+  - rocket - HTTPS framework
+  - OAuth2-rs
+  - github-rs - pure Rust bindings to Github API
+  - serde_json - JSON de/serialization
