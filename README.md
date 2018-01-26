@@ -18,6 +18,8 @@ Technologies explored:
     - Google Maps
     - Mapbox ..currently learning
   - Others fairly knowledgable on
+    - Linux (currently using Arch Linux)
+      - LXC - Linux containers
     - self hosted Wordpress
     - self hosted OpenCart
     - self hosted phpBB
