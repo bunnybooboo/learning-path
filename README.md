@@ -7,6 +7,7 @@ Technologies explored:
     - Github API v3
     - Gollum - Github's wiki
     - Github Pages
+    - Projects - card interface of issues
   - Programming Languages
     - C ..currently learning
     - Rust ..currently learning
