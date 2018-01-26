@@ -3,9 +3,10 @@ My personal learning path.
 
 Technologies explored:
   - Github
-    - Git terminal - clone, push, pull, fork, branch, rebase, submodule
+    - Git via terminal - clone, push, pull, fork, branch, rebase, submodule
     - Github API v3
     - Gollum - Github's wiki
+    - Github Pages
   - Programming Languages
     - C ..currently learning
     - Rust ..currently learning
