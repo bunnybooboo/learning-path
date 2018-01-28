@@ -29,3 +29,7 @@ As my task today is not understanding networking but simply getting LXC containe
 | lxcbr0 | redacted |	no | arch-test-002 |
 
 sees both my bridge and the connected container arch-test-002
+
+---
+
+Editing the lxc-net file via https://youtu.be/2Kqp0DiWv68?t=54m40s does nothing for the accessibility of the network.
