@@ -12,12 +12,12 @@ As my task today is not understanding networking but simply getting LXC containe
 
 `systemctl status lxc-net`
 
-> Active: active (exited) 
+> Active: active (exited)
 
 ..and no errors
 
 `brctl show`
 
-> bridge name		bridge id		STP enabled	interfaces
-> lxcbr0		<redacted>		no		arch-test-002
-
+| bridge name |	bridge id | STP enabled	| interfaces |
+| ----------- | :-------- | :---------- | :--------- |
+| lxcbr0 | redacted |	no | arch-test-002 |
