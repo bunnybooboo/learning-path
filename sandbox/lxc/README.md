@@ -3,7 +3,9 @@
 > dnsmasq: failed to create listening socket for 10.0.3.1: Address already in use
 
 Supposedly I have a mix of IPv4 and IPv6 calls. But I'm just following demo defaults in these wikis:
+
 https://wiki.archlinux.org/index.php/Linux_Containers#Container_configuration
+
 https://wiki.archlinux.org/index.php/Dnsmasq
 
 As my task today is not understanding networking but simply getting LXC container up to assist development testing isolation in another task. I was hoping rather quickly but 2 days later I'm still lacking necessary understanding.
