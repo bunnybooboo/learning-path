@@ -58,4 +58,12 @@ Commenting `resolv-file=/etc/resolv.dnsmasq.conf` in the dnsmasq.conf file did n
 
 7)
 
-Editing "bind-interface" to `bind-dynamic` REMOVES the error, but still no real live connecttion.
+Editing "bind-interface" to `bind-dynamic` REMOVES the error, but still no real live connection. In fact it seemed to skip right past 127.0.0.1 and "ignored" it as seen in the dnsmasq.service status.
+
+> ignoring nameserver 127.0.0.1 - local interface
+
+---
+
+8) uncommented `strict-order` gets rid of that ignored.
+
+> Active: active (running) 
