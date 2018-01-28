@@ -33,3 +33,9 @@ sees both my bridge and the connected container arch-test-002
 ---
 
 Editing the lxc-net file via https://youtu.be/2Kqp0DiWv68?t=54m40s does nothing for the accessibility of the network.
+
+---
+
+Editing the dnsmasq.conf file to interface = lo instead changes the error to:
+
+> failed to create listening socket for 127.0.0.1: Address already in use
