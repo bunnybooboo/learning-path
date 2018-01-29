@@ -1,3 +1,11 @@
+### Installing LXC and networking via bridge through dnsmasq in Arch Linux
+
+Arch Wiki used as guidance, but these have not allowed me to complete task.
+
+https://wiki.archlinux.org/index.php/Linux_Containers
+https://wiki.archlinux.org/index.php/Dnsmasq
+
+
 1- `sudo pacman -S lxc`
 2- `sudo pacman -S dnsmasq`
 3- `sudo lxc-create -n arch-test-001 -t archlinux`
