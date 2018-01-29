@@ -64,6 +64,6 @@ Editing "bind-interface" to `bind-dynamic` REMOVES the error, but still no real 
 
 ---
 
-8) uncommented `strict-order` gets rid of that ignored.
+8) uncommented `strict-order` gets rid of that "ignored" flag.
 
-> Active: active (running) 
+> Active: active (running)
