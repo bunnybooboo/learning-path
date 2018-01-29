@@ -1,5 +1,5 @@
-1- `sudo pacman -Rs lxc`
-2- `sudo pacman -Rs dnsmasq`
+1- `sudo pacman -S lxc`
+2- `sudo pacman -S dnsmasq`
 3- `sudo lxc-create -n arch-test-001 -t archlinux`
 4- Host network configuration on Arch Wiki LXC lxc-net is already propagated
 5- add file /etc/lxc/default.conf and fill with
