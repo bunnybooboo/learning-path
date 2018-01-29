@@ -59,7 +59,7 @@ dhcp-range=192.168.111.50,192.168.111.100,12h
 
 18. `reboot`
 
-19. `systemctl status NetworkManager` - active and running but with an error re dnsmasq and dhcp6..
+19. `systemctl status NetworkManager` - active and running but with an error re dnsmasq and dhcp6.. [see https://github.com/bunnybooboo/learning-path/issues/1 for all these status outputs]
 
 20. `systemctl status dnsmasq` - FAILED listening socket already in use
 
